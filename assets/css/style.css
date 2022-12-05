@@ -45,13 +45,17 @@ body {
 
 /*Start button styling*/
 
+#start-button {
+    margin-top: 15px;
+}
+
 button {
     font-family: Abril Fatface, sans-serif;
     font-size: 200%;
     display: block;
     margin: 0 auto;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: darkgreen;
     color: whitesmoke;
 
