@@ -6,6 +6,14 @@
     border: 0;
 }
 
+body {
+    background-image: url('../images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkcyan;
+}
+
 /*Heading styling*/
 #header {
     font-family: Abril Fatface, sans-serif;
