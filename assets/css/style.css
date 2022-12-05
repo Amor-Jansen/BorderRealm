@@ -31,7 +31,6 @@ body {
     text-align: center;
     padding: 15px;
     list-style-type: none;
-    color: whitesmoke;
 }
 
 /*Style game instructions*/
@@ -67,8 +66,10 @@ button {
     font-size: 200%;
 }
 
-#icons {
-    display: inline-block;
-    margin: 0 auto;
+.icons, .social {
+    text-align: center;
+    font-size: 150%;
+    float: inline-end;
+    padding: 20px;
     color: whitesmoke;
 }
