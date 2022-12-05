@@ -10,9 +10,9 @@ This is a 2D scroller game. My hope is to provide a fun to use game. Using only 
    - Returning visitor goals
    - Frequent user goals
    ### Design
-    - Colour scheme
-    - Typography
-    - Wireframes
+   - Colour scheme
+   - Typography
+   - Wireframes
    ### Existing features
     - Home page
     - Game Page
