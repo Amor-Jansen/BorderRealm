@@ -161,9 +161,9 @@ The live website can be found at :
 
 ### Credits
 
-- Code
-
-    I did Google a lot of concepts and used information from w3schools.com.
+## Code
+   - I followed a few different videos from https://www.youtube.com/@Frankslaboratory
+   - I did Google a lot of concepts and used information from w3schools.com.
 
 
 ## Content
