@@ -66,11 +66,15 @@ button {
 
 #social-media {
     font-size: 200%;
+    position: absolute;
+    bottom: 0;
 }
 
 .icons, .social {
     text-align: center;
-    font-size: 150%;
+    font-size: 100%;
     padding: 20px;
     color: whitesmoke;
+    margin-top: 20px;
+
 }
