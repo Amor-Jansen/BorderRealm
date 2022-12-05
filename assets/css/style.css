@@ -23,3 +23,11 @@
     padding: 15px;
     list-style-type: none;
 }
+
+/*Style game instructions*/
+#game-instructions {
+    font-family: Sarpanch, sans-serif;
+    text-align: center;
+    font-size: 200%;
+    letter-spacing: 4px;
+}
