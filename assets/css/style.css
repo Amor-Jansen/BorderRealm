@@ -21,6 +21,7 @@ body {
     letter-spacing: 2px;
     font-size: 300%;
     padding: 15px;
+    color: whitesmoke;
 }
 
 /*Control button information*/
@@ -30,6 +31,7 @@ body {
     text-align: center;
     padding: 15px;
     list-style-type: none;
+    color: whitesmoke;
 }
 
 /*Style game instructions*/
@@ -38,4 +40,19 @@ body {
     text-align: center;
     font-size: 200%;
     letter-spacing: 4px;
+    color: whitesmoke;
+}
+
+/*Start button styling*/
+
+button {
+    font-family: Abril Fatface, sans-serif;
+    font-size: 200%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: darkgreen;
+    color: whitesmoke;
+
 }
