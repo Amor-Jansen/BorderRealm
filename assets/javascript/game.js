@@ -6,4 +6,41 @@ window.addEventListener('load', function(){
     canvas.width = 1500;
     canvas.height = 500;
 
+    //Using classes for object orientated javascript
+    //HandleInput will handle things like keys 
+    class HandleInput {
+
+    }
+    //Weapon will handle all things to do with the weapon
+    class Weapon {
+
+    }
+    //Particle is all the particle animations from damaged enemies
+    class Particle {
+
+    }
+    //Player handles all information regarding the player sprite and function
+    class Player {
+
+    }
+    //BadGuys is all animation related to the enemies
+    class BadGuys {
+
+    }
+    //Layers is all functionality of the parallax background
+    class Layers {
+
+    }
+    //Background will pull all backgrounds together
+    class Background {
+
+    }
+    //Information will be used for things like ammo left and damage
+    class Information {
+
+    }
+    //Game is the class everything will run through and come together
+    class Game {
+
+    }
 });
