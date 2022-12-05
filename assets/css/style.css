@@ -5,3 +5,12 @@
     padding: 0;
     border: 0;
 }
+
+/*Heading styling*/
+#header {
+    font-family: Abril Fatface, sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 300%;
+    padding: 15px;
+}

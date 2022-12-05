@@ -71,8 +71,8 @@ This is a 2D scroller game. My hope is to provide a fun to use game. Using only 
    - CSS
 
 ### Frameworks, Libraries and Programs used
-   - Google Fonts -
-   - Font awesome - 
+   - Google Fonts - Abril Fatface and Sarpanch 
+   - Font awesome - Footer logos
    - Git - Used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
    - Github - Used to store code after being pushed from Git.
    - Balsamiq - Used to create wireframes for this website.
