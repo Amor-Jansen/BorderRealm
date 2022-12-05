@@ -60,3 +60,15 @@ button {
     color: whitesmoke;
 
 }
+
+/* Footer styling*/
+
+#social-media {
+    font-size: 200%;
+}
+
+#icons {
+    display: inline-block;
+    margin: 0 auto;
+    color: whitesmoke;
+}
