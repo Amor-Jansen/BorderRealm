@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -75,4 +75,15 @@ button {
     font-size: 100%;
     padding: 20px;
     color: whitesmoke;
+}
+
+/*Canvas styling*/
+
+#game-canvas {
+    border: 5px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6495ED;
 }
