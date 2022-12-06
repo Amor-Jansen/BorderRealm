@@ -11,8 +11,10 @@ window.addEventListener('load', function(){
     class HandleInput {
         constructor(game){
             this.game = game;
-            window.addEventListener('keydown', function(){
-                
+            window.addEventListener('keydown', function(e){
+                if (e.key === 'ArrowUp'){
+                    this.game.keys.push(e)
+                }
             })
         }
 
@@ -64,6 +66,8 @@ window.addEventListener('load', function(){
             this.width = width;
             this.height = height;
             this.player = new Player(this);
+            this.input = new HandleInput(this);
+            this.keys = [];
         }
         update(){
             this.player.update();
