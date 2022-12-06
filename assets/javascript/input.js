@@ -1,6 +1,5 @@
 //Using classes for object orientated javascript
 //HandleInput will handle things like keys 
-
 export class HandleInput {
     constructor(game){
         this.game = game;

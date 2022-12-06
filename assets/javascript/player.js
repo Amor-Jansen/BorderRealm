@@ -1,5 +1,4 @@
 //Player handles all information regarding the player sprite and function
-
 export class Player {
     constructor(game){
         this.game = game;
