@@ -1,3 +1,5 @@
+import { Player } from "./player";
+import { HandleInput } from "./input";
 //Adding an event listener to load all assets before game starts
 window.addEventListener('load', function(){
     //Setting the canvas layout
