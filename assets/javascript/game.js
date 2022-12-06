@@ -2,7 +2,7 @@
 window.addEventListener('load', function(){
     //Setting the canvas layout
     const canvas = document.getElementById('game-canvas');
-    const ctx = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     canvas.width = 1500;
     canvas.height = 500;
 
@@ -71,7 +71,7 @@ window.addEventListener('load', function(){
     //Game player loop
     function animate(){
         game.update();
-        game.draw(ctx);
+        game.draw(context);
         requestAnimationFrame(animate);
     }
     animate();
