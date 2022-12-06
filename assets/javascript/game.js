@@ -12,7 +12,9 @@ window.addEventListener('load', function(){
         constructor(game){
             this.game = game;
             window.addEventListener('keydown', function(e){
-                if (e.key === 'ArrowUp'){
+                if (((e.key === 'ArrowUp') ||
+                     (e.key === 'ArrowDown')
+                )&& this.game.keys.indexOf(e.key) === -1){
                     this.game.keys.push(e.key);
                 }
             });
@@ -20,7 +22,7 @@ window.addEventListener('load', function(){
                 if (this.game.keys.indexOf(e.key) > -1){
                     this.game.keys.splice(this.game.keys.indexOf(e.key) > -1);
                 }
-            })
+            });
         }
 
     }
@@ -41,8 +43,12 @@ window.addEventListener('load', function(){
             this.x = 20;
             this.y = 100;
             this.speedY = 0;
+            this.maxSpeed = 2;
         }
         update(){
+            if (this.game.keys.includes(ArrowUp)) this.speedY = -this.maxSpeed;
+            else if (this.game.keys.includes(ArrowUp)) this.speedY = this.maxSpeed;
+            else this.speedY = 0;
             this.y += this.speedY;
         }
         draw(context){
