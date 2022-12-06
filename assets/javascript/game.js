@@ -9,6 +9,12 @@ window.addEventListener('load', function(){
     //Using classes for object orientated javascript
     //HandleInput will handle things like keys 
     class HandleInput {
+        constructor(game){
+            this.game = game;
+            window.addEventListener('keydown', function(){
+                
+            })
+        }
 
     }
     //Weapon will handle all things to do with the weapon
