@@ -11,14 +11,14 @@ window.addEventListener('load', function(){
     class HandleInput {
         constructor(game){
             this.game = game;
-            window.addEventListener('keydown', function(e){
+            window.addEventListener('onkeydown', e => {
                 if (((e.key === 'ArrowUp') ||
                      (e.key === 'ArrowDown')
                 )&& this.game.keys.indexOf(e.key) === -1){
                     this.game.keys.push(e.key);
                 }
             });
-            window.addEventListener('keyup', function(){
+            window.addEventListener('onkeyup', e => {
                 if (this.game.keys.indexOf(e.key) > -1){
                     this.game.keys.splice(this.game.keys.indexOf(e.key) > -1);
                 }
