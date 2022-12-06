@@ -2,7 +2,7 @@
 window.addEventListener('load', function(){
     //Setting the canvas layout
     const canvas = document.getElementById('game-canvas');
-    const context = canvas.getContext('2d');
+    const cntxt = canvas.getContext('2d');
     canvas.width = 1500;
     canvas.height = 500;
 
@@ -30,10 +30,10 @@ window.addEventListener('load', function(){
             this.speedY = 0;
         }
         update(){
-
+            this.y += this.speedY;
         }
-        draw(){
-
+        draw(context){
+            context.fillRect(this.x, this.y, this.width, this.height);
         }
     }
     //BadGuys is all animation related to the enemies
@@ -54,6 +54,16 @@ window.addEventListener('load', function(){
     }
     //Game is the class everything will run through and come together
     class Game {
+        constructor(width, height){
+            this.width = width;
+            this.height = height;
+            this.player = new Player(this);
+        }
+        update(){
 
+        }
+        draw(){
+            
+        }
     }
 });
