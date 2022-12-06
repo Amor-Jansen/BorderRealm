@@ -1,6 +1,5 @@
-import { Player } from "./player";
-import { HandleInput } from "./input";
-
+import { Player} from "./player.js";
+import { HandleInput } from "./input.js";
 //Adding an event listener to load all assets before game starts
 window.addEventListener('load', function(){
     //Setting the canvas layout
@@ -9,8 +8,7 @@ window.addEventListener('load', function(){
     canvas.width = 1500;
     canvas.height = 500;
 
-
-    
+   
     //Weapon will handle all things to do with the weapon
     class Weapon {
 
@@ -19,8 +17,7 @@ window.addEventListener('load', function(){
     class Particle {
 
     }
-
-
+    
     //BadGuys is all animation related to the enemies
     class BadGuys {
 
