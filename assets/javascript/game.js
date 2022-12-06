@@ -60,10 +60,10 @@ window.addEventListener('load', function(){
             this.player = new Player(this);
         }
         update(){
-
+            this.player.update();
         }
         draw(){
-            
+            this.player.draw(context);
         }
     }
 });
