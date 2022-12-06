@@ -13,7 +13,12 @@ window.addEventListener('load', function(){
             this.game = game;
             window.addEventListener('keydown', function(e){
                 if (e.key === 'ArrowUp'){
-                    this.game.keys.push(e)
+                    this.game.keys.push(e.key);
+                }
+            });
+            window.addEventListener('keyup', function(){
+                if (this.game.keys.indexOf(e.key) > -1){
+                    this.game.keys.splice(this.game.keys.indexOf(e.key) > -1);
                 }
             })
         }
