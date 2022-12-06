@@ -66,4 +66,13 @@ window.addEventListener('load', function(){
             this.player.draw(context);
         }
     }
+
+    const game = new Game(canvas.width, canvas.height);
+    //Game player loop
+    function spriteAnimation(){
+        game.update();
+        game.draw(cntxt);
+        requestAnimationFrame(spriteAnimation);
+    }
+    animate();
 });
