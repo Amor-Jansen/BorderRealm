@@ -6,26 +6,8 @@ window.addEventListener('load', function(){
     canvas.width = 1500;
     canvas.height = 500;
 
-    //Using classes for object orientated javascript
-    //HandleInput will handle things like keys 
-    class HandleInput {
-        constructor(game){
-            this.game = game;
-            window.addEventListener('onkeydown', e => {
-                if (((e.key === 'ArrowUp') ||
-                     (e.key === 'ArrowDown')
-                )&& this.game.keys.indexOf(e.key) === -1){
-                    this.game.keys.push(e.key);
-                }
-            });
-            window.addEventListener('onkeyup', e => {
-                if (this.game.keys.indexOf(e.key) > -1){
-                    this.game.keys.splice(this.game.keys.indexOf(e.key) > -1);
-                }
-            });
-        }
 
-    }
+    
     //Weapon will handle all things to do with the weapon
     class Weapon {
 
@@ -34,27 +16,8 @@ window.addEventListener('load', function(){
     class Particle {
 
     }
-    //Player handles all information regarding the player sprite and function
-    class Player {
-        constructor(game){
-            this.game = game;
-            this.width = 120;
-            this.height = 190;
-            this.x = 20;
-            this.y = 100;
-            this.speedY = 0;
-            this.maxSpeed = 2;
-        }
-        update(){
-            if (this.game.keys.includes(ArrowUp)) this.speedY = -this.maxSpeed;
-            else if (this.game.keys.includes(ArrowUp)) this.speedY = this.maxSpeed;
-            else this.speedY = 0;
-            this.y += this.speedY;
-        }
-        draw(context){
-            context.fillRect(this.x, this.y, this.width, this.height);
-        }
-    }
+
+
     //BadGuys is all animation related to the enemies
     class BadGuys {
 
