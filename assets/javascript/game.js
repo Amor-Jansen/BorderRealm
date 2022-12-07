@@ -11,7 +11,9 @@ window.addEventListener('load', function(){
    
     //Weapon will handle all things to do with the weapon
     class Weapon {
-
+        constructor(game, x, y){
+            
+        }
     }
     //Particle is all the particle animations from damaged enemies
     class Particle {
