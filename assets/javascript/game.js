@@ -109,9 +109,14 @@ window.addEventListener('load', function(){
             context.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    //Baddie number one
+    //Monster number one
     class Angler1 extends BadGuys {
-        
+        constructor(game){
+            super(game);
+            this.width = 228;
+            this.height = 169;
+            this.y = Math.random() * (this.game.height * 0.9 - this.height);
+        }
     }
     //Layers is all functionality of the parallax background
     class Layers {
@@ -158,6 +163,10 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
+            this.badGuys.forEach(badGuy => {
+                badGuy.update();
+            });
+            this.badguys = this.badguys.filter(badGuy => !this.badGuy.markedForDeletion);
         }
         draw(){
             this.player.draw(context);
