@@ -1,5 +1,6 @@
 import { Player} from "./player.js";
 import { HandleInput } from "./input.js";
+import { Weapon } from "./weapon.js";
 //Adding an event listener to load all assets before game starts
 window.addEventListener('load', function(){
     //Setting the canvas layout
@@ -9,26 +10,7 @@ window.addEventListener('load', function(){
     canvas.height = 500;
 
    
-    //Weapon will handle all things to do with the weapon
-    class Weapon {
-        constructor(game, x, y){
-            this.game = game;
-            this.x = x;
-            this.y = y;
-            this.width = 10;
-            this.height = 3;
-            this.speed = 3;
-            this.markedForDeletion = false;
-        }
-        update(){
-            this.x += this.speed;
-            if (this.x > this.game.width * 0.8) this.markedForDeletion = true;
-        }
-        draw(context){
-            context.fillstyle = 'yellow';
-            fillRect(this.x, this.y, this.width, this.height);
-        }
-    }
+
     //Particle is all the particle animations from damaged enemies
     class Particle {
 

@@ -24,8 +24,11 @@ export class Player {
     draw(context){
         context.fillstyle = 'black';
         context.fillRect(this.x, this.y, this.width, this.height);
+        this.weapon.forEach(weapon => {
+            weapon.update(context);
+        });
     }
     weaponTop(){
-        this.projectile.push(new this.weapon(this.game, this.x, this.y));
+        this.weapon.push(new this.weapon(this.game, this.x, this.y));
     }
 };
