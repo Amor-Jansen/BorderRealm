@@ -93,11 +93,11 @@ window.addEventListener('load', function(){
     }
     
     //BadGuys is all animation related to the enemies
-    class BadGuys {
+    class Monster {
         constructor(game){
             this.game = game;
             this.x = this.game.width;
-            this.speedX = Math.random() * -1.5 -0.5;
+            this.speedX = Math.random() * -1.5 - 0.5;
             this.markedForDeletion = false;
         }
         update(){
@@ -110,11 +110,11 @@ window.addEventListener('load', function(){
         }
     }
     //Monster number one
-    class Angler1 extends BadGuys {
+    class Angler1 extends Monster {
         constructor(game){
             super(game);
-            this.width = 228;
-            this.height = 169;
+            this.width = 228 * 0.2;
+            this.height = 169 * 0.2;
             this.y = Math.random() * (this.game.height * 0.9 - this.height);
         }
     }
@@ -150,9 +150,9 @@ window.addEventListener('load', function(){
             this.input = new HandleInput(this);
             this.userInt = new UserInt(this);
             this.keys = [];
-            this.badGuys = [];
-            this.badGuyTimer = 0;
-            this.badGuyInterval = 1000;
+            this.monsters = [];
+            this.monsterTimer = 0;
+            this.monsterInterval = 1000;
             this.ammo = 20;
             this.maxAmmo = 50;
             this.ammoTimer = 0;
@@ -167,26 +167,26 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
-            this.badGuys.forEach(badGuy => {
-                badGuy.update();
+            this.monsters.forEach(monster => {
+                monster.update();
             });
-            this.badguys = this.badguys.filter(badGuy => !this.badGuy.markedForDeletion);
-            if (this.badGuyTimer > this.badGuyInterval && !this.gameOver){
-                this.addBadGuy();
-                this.badGuyTimer = 0;
+            this.monsters = this.monsters.filter(_monster => !this.monster.markedForDeletion);
+            if (this.monsterTimer > this.monsterInterval && !this.gameOver){
+                this.addMonster();
+                this.monsterTimer = 0;
             } else {
-                this.badGuyTimer += deltaTime;
+                this.monsterTimer += deltaTime;
             }
         }
         draw(context){
             this.player.draw(context);
             this.userInt.draw(context);
-            this.badGuys.forEach(badGuy => {
-                badGuy.draw(context);
+            this.monsters.forEach(monster => {
+                monster.draw(context);
             });
         }
-        addBadGuy(){
-            this.badGuys.push(new Angler1(this));
+        addMonster(){
+            this.monsters.push(new Angler1(this));
         }
     }
 
