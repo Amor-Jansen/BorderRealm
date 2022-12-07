@@ -150,6 +150,9 @@ window.addEventListener('load', function(){
             this.input = new HandleInput(this);
             this.userInt = new UserInt(this);
             this.keys = [];
+            this.badGuys = [];
+            this.badGuyTimer = 0;
+            this.badGuyInterval = 1000;
             this.ammo = 20;
             this.maxAmmo = 50;
             this.ammoTimer = 0;
@@ -168,9 +171,15 @@ window.addEventListener('load', function(){
             });
             this.badguys = this.badguys.filter(badGuy => !this.badGuy.markedForDeletion);
         }
-        draw(){
+        draw(context){
             this.player.draw(context);
             this.userInt.draw(context);
+            this.badGuys.forEach(badGuy => {
+                badGuy.draw(context);
+            });
+        }
+        addBadGuy(){
+            this.badGuys.push(new Angler1(this));
         }
     }
 
