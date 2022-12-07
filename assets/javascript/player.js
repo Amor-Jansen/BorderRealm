@@ -8,27 +8,30 @@ export class Player {
         this.y = 100;
         this.speedY = 0;
         this.maxSpeed = 2;
-        this.weapon = [];
+        this.fireBall = [];
     }
     update(){
         if (this.game.keys.includes('ArrowUp'))this.speedY = -this.maxSpeed;
         else if (this.game.keys.includes('ArrowDown'))this.speedY = this.maxSpeed;
         else this.speedY = 0;
         this.y += this.speedY;
-        //Handle weapons
-        this.weapon.forEach(weapon => {
-            weapon.update();
+        //Handle fire balls
+        this.fireBall.forEach(fireBall => {
+           fireBall.update();
         });
-        this.weapon = this.weapon.filter(weapon => !weapon.markedForDeletion);
+        this.fireBall = this.fireBall.filter(fireBall => !fireBall.markedForDeletion);
     }
     draw(context){
         context.fillstyle = 'black';
         context.fillRect(this.x, this.y, this.width, this.height);
-        this.weapon.forEach(weapon => {
-            weapon.update(context);
+        this.fireBall.forEach(fireBall => {
+            fireBall.update(context);
         });
     }
     weaponTop(){
-        this.weapon.push(new Weapon(this.game, this.x, this.y));
+        if (this.game.ammo > 0){
+            this.fireBall.push(new FireBall(this.game, this.x, this.y));
+        };
+        
     }
 };

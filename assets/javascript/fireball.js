@@ -1,5 +1,5 @@
     //Weapon will handle all things to do with the weapon
-    export class Weapon {
+    export class FireBall {
         constructor(game, x, y){
             this.game = game;
             this.x = x;
