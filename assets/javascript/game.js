@@ -18,12 +18,15 @@ window.addEventListener('load', function(){
             this.width = 10;
             this.height = 3;
             this.speed = 3;
+            this.markedForDeletion = false;
         }
         update(){
-
+            this.x += this.speed;
+            if (this.x > this.game.width * 0.8) this.markedForDeletion = true;
         }
-        draw(){
-            
+        draw(context){
+            context.fillstyle = 'yellow';
+            fillRect(this.x, this.y, this.width, this.height);
         }
     }
     //Particle is all the particle animations from damaged enemies
