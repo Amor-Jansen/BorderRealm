@@ -1,5 +1,6 @@
 import { Player} from "./player.js";
 import { HandleInput } from "./input.js";
+import { FireBall } from "./fireball.js"
 //Adding an event listener to load all assets before game starts
 window.addEventListener('load', function(){
     //Setting the canvas layout

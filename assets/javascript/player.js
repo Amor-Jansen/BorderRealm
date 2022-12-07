@@ -28,7 +28,7 @@ export class Player {
             fireBall.update(context);
         });
     }
-    weaponTop(){
+    fireBallTop(){
         if (this.game.ammo > 0){
             this.fireBall.push(new FireBall(this.game, this.x, this.y));
         };
