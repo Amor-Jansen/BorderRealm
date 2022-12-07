@@ -25,12 +25,13 @@ export class Player {
         context.fillstyle = 'black';
         context.fillRect(this.x, this.y, this.width, this.height);
         this.fireBall.forEach(fireBall => {
-            fireBall.update(context);
+            fireBall.draw(context);
         });
     }
-    fireBallTop(){
+    shootTop(){
         if (this.game.ammo > 0){
-            this.fireBall.push(new FireBall(this.game, this.x, this.y));
+            this.fireBall.push(new FireBall(this.game, this.x + 80, this.y + 30));
+            this.game.ammo--;
         };
         
     }

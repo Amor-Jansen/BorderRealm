@@ -9,7 +9,7 @@ export class HandleInput {
                  && this.game.keys.indexOf(e.key) === -1){
                 this.game.keys.push(e.key);
             } else if ( e.key === ' '){
-                this.game.player.fireBallTop();
+                this.game.player.shootTop();
             }
         });
         window.addEventListener('keyup', e => {
