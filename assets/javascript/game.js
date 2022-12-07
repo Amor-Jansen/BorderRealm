@@ -12,6 +12,17 @@ window.addEventListener('load', function(){
     //Weapon will handle all things to do with the weapon
     class Weapon {
         constructor(game, x, y){
+            this.game = game;
+            this.x = x;
+            this.y = y;
+            this.width = 10;
+            this.height = 3;
+            this.speed = 3;
+        }
+        update(){
+
+        }
+        draw(){
             
         }
     }
