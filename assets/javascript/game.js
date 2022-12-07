@@ -116,6 +116,7 @@ window.addEventListener('load', function(){
             this.player = new Player(this);
             this.input = new HandleInput(this);
             this.keys = [];
+            this.ammo = 20;
         }
         update(){
             this.player.update();
