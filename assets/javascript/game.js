@@ -1,14 +1,12 @@
-//import { Player} from "./player";
-//import { HandleInput } from "./input";
-//import { FireBall} from "./fireball";
-//Adding an event listener to load all assets before game starts
+/*Adding an event listener to load all assets before game starts*/
 window.addEventListener('load', function(){
-    //Setting the canvas layout
+/*Setting the canvas layout*/
     const canvas = document.getElementById('game-canvas');
     const context = canvas.getContext('2d');
     canvas.width = 1500;
     canvas.height = 500;
 
+/*This class handles all the user input, such as key strokes*/ 
     class HandleInput {
         constructor(game){
             this.game = game;
@@ -29,6 +27,7 @@ window.addEventListener('load', function(){
     
     }
 
+/*The fire ball class handles all the projectile information*/
     class FireBall {
         constructor(game, x, y){
             this.game = game;
@@ -49,6 +48,7 @@ window.addEventListener('load', function(){
         }
     }
 
+/*The player class holds all the information on the players character*/
     class Player {
         constructor(game){
             this.game = game;
@@ -92,7 +92,7 @@ window.addEventListener('load', function(){
 
     }
     
-    //BadGuys is all animation related to the enemies
+/*Monster is all animation related to the enemies*/
     class Monster {
         constructor(game){
             this.game = game;
@@ -109,7 +109,7 @@ window.addEventListener('load', function(){
             context.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    //Monster number one
+/*Monster number one which is a child of the monster class*/
     class Angler1 extends Monster {
         constructor(game){
             super(game);
@@ -126,7 +126,7 @@ window.addEventListener('load', function(){
     class Background {
 
     }
-    //Information will be used for things like ammo left and damage
+/*User Interface will be used for things like ammo left and damage*/
     class UserInt {
         constructor(game){
             this.game = game;
@@ -141,7 +141,7 @@ window.addEventListener('load', function(){
             }
         }
     }
-    //Game is the class everything will run through and come together
+/*Game is the class everything will run through and come together*/
     class Game {
         constructor(width, height){
             this.width = width;
@@ -170,7 +170,7 @@ window.addEventListener('load', function(){
             this.monsters.forEach(monster => {
                 monster.update();
             });
-            this.monsters = this.monsters.filter(_monster => !this.monster.markedForDeletion);
+           // this.monsters = this.monsters.filter(Monster => !this.monster.markedForDeletion);
             if (this.monsterTimer > this.monsterInterval && !this.gameOver){
                 this.addMonster();
                 this.monsterTimer = 0;
@@ -192,7 +192,7 @@ window.addEventListener('load', function(){
 
     const game = new Game(canvas.width, canvas.height);
     let lastTime = 0;
-    //Game player loop
+/*Game player loop*/
     function animate(timeStamp){
         const deltaTime = timeStamp - lastTime;
         lastTime = timeStamp;
