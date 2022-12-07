@@ -29,6 +29,6 @@ export class Player {
         });
     }
     weaponTop(){
-        this.weapon.push(new this.weapon(this.game, this.x, this.y));
+        this.weapon.push(new Weapon(this.game, this.x, this.y));
     }
 };

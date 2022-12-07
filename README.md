@@ -144,8 +144,8 @@ I ran my page through lighthouse in chrome.
 
 |Bug |	How I fixed it |	Outcome|
 |Background image was not full screen |	I used min-height: 100vh;| 	As desired|
-|Images were not displaying correctly |	I used a grid method (see credits)| 	As desired|
-|Validator warning in HTML |	I icluded a heading in the contact us page |	As desired|
+|Player character was not showing on screen | I was missing '' around ArrowUp| 	As desired|
+|struggling to import weapon js to game js. |	 | |
 
 ### Deployment
 
