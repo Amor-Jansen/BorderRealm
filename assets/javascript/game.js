@@ -157,6 +157,7 @@ window.addEventListener('load', function(){
             this.maxAmmo = 50;
             this.ammoTimer = 0;
             this.ammoInterval = 500;
+            this.gameOver = false;
         }
         update(deltaTime){
             this.player.update();
@@ -170,6 +171,12 @@ window.addEventListener('load', function(){
                 badGuy.update();
             });
             this.badguys = this.badguys.filter(badGuy => !this.badGuy.markedForDeletion);
+            if (this.badGuyTimer > this.badGuyInterval && !this.gameOver){
+                this.addBadGuy();
+                this.badGuyTimer = 0;
+            } else {
+                this.badGuyTimer += deltaTime;
+            }
         }
         draw(context){
             this.player.draw(context);
