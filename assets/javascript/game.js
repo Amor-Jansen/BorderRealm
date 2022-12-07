@@ -94,7 +94,19 @@ window.addEventListener('load', function(){
     
     //BadGuys is all animation related to the enemies
     class BadGuys {
+        constructor(game){
+            this.game = game;
+            this.x = this.game.width;
+            this.speedX = Math.random() * -1.5 -0.5;
+            this.markedForDeletion = false;
+        }
+        update(){
+            this.x += this.speedX;
+            if (this.x + this.width < 0) this.markedForDeletion = true;
+        }
+        draw(context){
 
+        }
     }
     //Layers is all functionality of the parallax background
     class Layers {
