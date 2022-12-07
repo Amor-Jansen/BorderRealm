@@ -8,6 +8,7 @@ export class Player {
         this.y = 100;
         this.speedY = 0;
         this.maxSpeed = 2;
+        this.weapon = [];
     }
     update(){
         if (this.game.keys.includes('ArrowUp'))this.speedY = -this.maxSpeed;
@@ -16,6 +17,10 @@ export class Player {
         this.y += this.speedY;
     }
     draw(context){
+        context.fillstyle = 'black';
         context.fillRect(this.x, this.y, this.width, this.height);
+    }
+    weaponTop(){
+        this.projectile.push(new this.weapon(this.game, this.x, this.y));
     }
 };
