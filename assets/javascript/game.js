@@ -44,7 +44,7 @@ window.addEventListener('load', function(){
             if (this.x > this.game.width * 0.8) this.markedForDeletion = true;
         }
         draw(context){
-            context.fillstyle = 'yellow';
+            context.fillStyle = 'yellow';
             context.fillRect(this.x, this.y, this.width, this.height);
         }
     }
@@ -72,7 +72,7 @@ window.addEventListener('load', function(){
             this.fireBalls = this.fireBalls.filter(fireBall => !fireBall.markedForDeletion);
         }
         draw(context){
-            context.fillstyle = 'black';
+            context.fillStyle = 'black';
             context.fillRect(this.x, this.y, this.width, this.height);
             this.fireBalls.forEach(fireBall => {
                 fireBall.draw(context);
@@ -105,8 +105,19 @@ window.addEventListener('load', function(){
 
     }
     //Information will be used for things like ammo left and damage
-    class Information {
-
+    class UserInt {
+        constructor(game){
+            this.game = game;
+            this.fontSize = 25;
+            this.fontFamily = 'Sarpanch';
+            this.color = 'black'
+        }
+        draw(context){
+            context.fillStyle = this.color;
+            for (let i = 0; i < this.game.ammo; i++){
+                context.fillRect(20, 50, 3, 20);
+            }
+        }
     }
     //Game is the class everything will run through and come together
     class Game {
@@ -115,13 +126,14 @@ window.addEventListener('load', function(){
             this.height = height;
             this.player = new Player(this);
             this.input = new HandleInput(this);
+            this.userInt = new UserInt(this);
             this.keys = [];
             this.ammo = 20;
             this.maxAmmo = 50;
             this.ammoTimer = 0;
             this.ammoInterval = 500;
         }
-        update(){
+        update(deltaTime){
             this.player.update();
             if (this.ammoTimer > this.ammoInterval){
                 if (this.ammo < this.maxAmmo) this.ammo++;
@@ -132,6 +144,7 @@ window.addEventListener('load', function(){
         }
         draw(){
             this.player.draw(context);
+            this.userInt.draw(context);
         }
     }
 
