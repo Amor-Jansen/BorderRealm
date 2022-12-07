@@ -105,8 +105,13 @@ window.addEventListener('load', function(){
             if (this.x + this.width < 0) this.markedForDeletion = true;
         }
         draw(context){
-
+            context.fillStyle = 'red';
+            context.fillRect(this.x, this.y, this.width, this.height);
         }
+    }
+    //Baddie number one
+    class Angler1 extends BadGuys {
+        
     }
     //Layers is all functionality of the parallax background
     class Layers {
