@@ -15,6 +15,11 @@ export class Player {
         else if (this.game.keys.includes('ArrowDown'))this.speedY = this.maxSpeed;
         else this.speedY = 0;
         this.y += this.speedY;
+        //Handle weapons
+        this.weapon.forEach(weapon => {
+            weapon.update();
+        });
+        this.weapon = this.weapon.filter(weapon => !weapon.markedForDeletion);
     }
     draw(context){
         context.fillstyle = 'black';
