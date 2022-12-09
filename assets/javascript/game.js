@@ -93,7 +93,7 @@ window.addEventListener('load', function(){
     }
     
 /*Monster is all animation related to the enemies*/
-    class Monster {
+    class Enemy {
         constructor(game){
             this.game = game;
             this.x = this.game.width;
@@ -110,7 +110,7 @@ window.addEventListener('load', function(){
         }
     }
 /*Monster number one which is a child of the monster class*/
-    class Angler1 extends Monster {
+    class Angler1 extends Enemy {
         constructor(game){
             super(game);
             this.width = 228 * 0.2;
@@ -150,9 +150,9 @@ window.addEventListener('load', function(){
             this.input = new HandleInput(this);
             this.userInt = new UserInt(this);
             this.keys = [];
-            this.monsters = [];
-            this.monsterTimer = 0;
-            this.monsterInterval = 1000;
+            this.enemies = [];
+            this.enemyTimer = 0;
+            this.enemyInterval = 1000;
             this.ammo = 20;
             this.maxAmmo = 50;
             this.ammoTimer = 0;
@@ -167,29 +167,29 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
-            this.monsters.forEach(monster => {
-                monster.update();
-                if(this.checkCollisions(this.player, monster)){
-                    monster.markedForDeletion = true
+            this.enemies.forEach(enemy => {
+                enemy.update();
+                if(this.checkCollisions(this.player, enemy)){
+                    enemy.markedForDeletion = true
                 }
             });
-           // this.monsters = this.monsters.filter(Monster => !this.monster.markedForDeletion);
-            if (this.monsterTimer > this.monsterInterval && !this.gameOver){
-                this.addMonster();
-                this.monsterTimer = 0;
+            this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
+            if (this.enemyTimer > this.enemyInterval && !this.gameOver){
+                this.addEnemy();
+                this.enemyTimer = 0;
             } else {
-                this.monsterTimer += deltaTime;
+                this.enemyTimer += deltaTime;
             }
         }
         draw(context){
             this.player.draw(context);
             this.userInt.draw(context);
-            this.monsters.forEach(monster => {
-                monster.draw(context);
+            this.enemies.forEach(enemy => {
+                enemy.draw(context);
             });
         }
-        addMonster(){
-            this.monsters.push(new Angler1(this));
+        addEnemy(){
+            this.enemies.push(new Angler1(this));
         }
         checkCollisions(rect1, rect2){
             return( rect1.x < rect2.x + rect2.width &&
