@@ -169,6 +169,9 @@ window.addEventListener('load', function(){
             }
             this.monsters.forEach(monster => {
                 monster.update();
+                if(this.checkCollisions(this.player, monster)){
+                    monster.markedForDeletion = true
+                }
             });
            // this.monsters = this.monsters.filter(Monster => !this.monster.markedForDeletion);
             if (this.monsterTimer > this.monsterInterval && !this.gameOver){
