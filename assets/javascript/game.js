@@ -109,6 +109,9 @@ window.addEventListener('load', function(){
         draw(context){
             context.fillStyle = 'red';
             context.fillRect(this.x, this.y, this.width, this.height);
+            context.fillStyle = 'black';
+            context.font = '20px arpanch';
+            context.fillText(this.lives, this.x, this.y)
         }
     }
 /*Monster number one which is a child of the monster class*/
