@@ -172,6 +172,16 @@ window.addEventListener('load', function(){
                 if(this.checkCollisions(this.player, enemy)){
                     enemy.markedForDeletion = true
                 }
+                this.player.fireBalls.forEach(fireBall => {
+                    if (this.checkCollisions(fireBall, enemy)){
+                        enemy.lives--;
+                        fireBall.markedForDeletion = true;
+                        if (enemy.lives <= 0){
+                            enemy.markedForDeletion = true;
+                            this.score += enemy.score;
+                        }
+                    }
+                })
             });
             this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
             if (this.enemyTimer > this.enemyInterval && !this.gameOver){
