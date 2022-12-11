@@ -92,7 +92,7 @@ window.addEventListener('load', function(){
 
     }
     
-/*Monster is all animation related to the enemies*/
+/*Enemy is all animation related to the enemies*/
     class Enemy {
         constructor(game){
             this.game = game;
@@ -114,7 +114,7 @@ window.addEventListener('load', function(){
             context.fillText(this.lives, this.x, this.y)
         }
     }
-/*Monster number one which is a child of the monster class*/
+/*Monster number one which is a child of the enemy class*/
     class Angler1 extends Enemy {
         constructor(game){
             super(game);
@@ -163,6 +163,8 @@ window.addEventListener('load', function(){
             this.ammoTimer = 0;
             this.ammoInterval = 500;
             this.gameOver = false;
+            this.score = 0;
+            this.winningScore = 10;
         }
         update(deltaTime){
             this.player.update();
@@ -184,6 +186,7 @@ window.addEventListener('load', function(){
                         if (enemy.lives <= 0){
                             enemy.markedForDeletion = true;
                             this.score += enemy.score;
+                            if (this.score > this.winningScore) this.gameOver = true;
                         }
                     }
                 })
