@@ -140,6 +140,10 @@ window.addEventListener('load', function(){
             this.color = 'black'
         }
         draw(context){
+            //Score
+            context.font = this.fontSize + 'px' + this.fontFamily;
+            context.fillText('Score: ' + this.game.score, 20, 40);
+            //Ammo
             context.fillStyle = this.color;
             for (let i = 0; i < this.game.ammo; i++){
                 context.fillRect(20 + 5 * i, 50, 3, 20);
