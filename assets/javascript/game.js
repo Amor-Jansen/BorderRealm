@@ -143,8 +143,8 @@ window.addEventListener('load', function(){
             //Score
             context.save();
             context.fillStyle = this.color;
-            context.shadowOffSetX = 2;
-            context.shadowOffSetY = 2;
+            context.shadowOffsetX = 2;
+            context.shadowOffsetY = 2;
             context.shadowColor = 'black';
             context.font = this.fontSize + 'px' + this.fontFamily;
             context.fillText('Score: ' + this.game.score, 20, 40);
