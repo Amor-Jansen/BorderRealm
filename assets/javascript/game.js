@@ -153,6 +153,9 @@ window.addEventListener('load', function(){
             for (let i = 0; i < this.game.ammo; i++){
                 context.fillRect(20 + 5 * i, 50, 3, 20);
             }
+            //Timer
+            const formattedTime = (this.game.gameTime * 0.001).toFixed(1);
+            context.fillText('Timer: ' + formattedTime, 20, 100);
             //Game over messages
             if (this.game.gameOver){
                 context.textAlign = 'center';
