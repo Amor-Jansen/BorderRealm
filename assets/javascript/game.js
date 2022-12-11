@@ -137,10 +137,15 @@ window.addEventListener('load', function(){
             this.game = game;
             this.fontSize = 25;
             this.fontFamily = 'Sarpanch';
-            this.color = 'black'
+            this.color = 'white'
         }
         draw(context){
             //Score
+            context.save();
+            context.fillStyle = this.color;
+            context.shadowOffSetX = 2;
+            context.shadowOffSetY = 2;
+            context.shadowColor = 'black';
             context.font = this.fontSize + 'px' + this.fontFamily;
             context.fillText('Score: ' + this.game.score, 20, 40);
             //Ammo
@@ -148,6 +153,7 @@ window.addEventListener('load', function(){
             for (let i = 0; i < this.game.ammo; i++){
                 context.fillRect(20 + 5 * i, 50, 3, 20);
             }
+            context.restore();
         }
     }
 /*Game is the class everything will run through and come together*/
