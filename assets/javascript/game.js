@@ -127,10 +127,6 @@ window.addEventListener('load', function(){
     }
     //Layers is all functionality of the parallax background
     class Layers {
-
-    }
-    //Background will pull all backgrounds together
-    class Background {
         constructor(game, image, speedModifier){
             this.game = game;
             this.image = image;
@@ -140,6 +136,22 @@ window.addEventListener('load', function(){
             this.x = 0;
             this.y = 0;
         }     
+        update(){
+            if(this.x <= this.width) this.x = 0;
+            else this.x -= this.game.speed * this.speedModifier;
+        }
+        draw(context){
+            context.drawImage(this.image, this.x, this.y)
+        }
+    }
+    //Background will pull all backgrounds together
+    class Background {
+        constructor(game){
+            this.game = game;
+            this.image1 = document.getElementById('layer1');
+            this.layer1 = new Layers(this.game, this.image1, 1);
+            this.layers = [layer1];
+        }
     }
 /*User Interface will be used for things like ammo left and damage*/
     class UserInt {
@@ -207,6 +219,7 @@ window.addEventListener('load', function(){
             this.winningScore = 10;
             this.gameTime = 0;
             this.timeLimit = 5000;
+            this.speed = 1;
         }
         update(deltaTime){
             if (!this.gameOver) this.gameTime += deltaTime;
