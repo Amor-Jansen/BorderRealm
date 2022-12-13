@@ -34,19 +34,19 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 ### User stories
 - ### First time visitor goals:
-    1. As a first time visitor, 
-    2. As a first time visitor, 
-    3. As a first time visitor, 
+    1. As a first time visitor, I was unsure of how to play the game.
+    2. As a first time visitor, I could not see my game score.
+    3. As a first time visitor, I did not understand the game.
 
 - ### Returning visitor goals:
-    1. As a returning visitor, 
-    2. As a returning visitor, 
-    3. As a returning visitor, 
+    1. As a returning visitor, I want to be able to play this on my phone.
+    2. As a returning visitor, I would like to increase the difficulty.
+    3. As a returning visitor, I would like more enemies.
 
 - ### Frequent user goals
-    1. As a frequent user, 
-    2. As a frequent user, 
-    3. As a frequent user, 
+    1. As a frequent user, I would like more games.
+    2. As a frequent user, I would like to see a leaderboard.
+    3. As a frequent user, I would like to make contact with the game developer.
 
 ### Design
 - ### Colour scheme
@@ -170,7 +170,7 @@ The live website can be found at :
  
  - ### Content
 
-    - I used Google fonts Shalimar and Overpass.
+    - I used Google fonts 
     - I used Fontawesome for the footer logos.
     - I used Favicon.oi for my favicon.
     - I used Balsamiq for the wireframes.
