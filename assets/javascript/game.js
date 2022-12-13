@@ -1,4 +1,5 @@
-/*Code is a mixture of https://www.franksworld.com/tag/franks-laboratory/ , W3Schools , and https://www.udemy.com/courses/search/?src=ukw&q=javascript+game.
+/*Code is a mixture of https://www.franksworld.com/tag/franks-laboratory/ , W3Schools , 
+*and https://www.udemy.com/courses/search/?src=ukw&q=javascript+game.
 *Adding an event listener to load all assets before game starts*/
 window.addEventListener('load', function(){
 /*Setting the canvas layout*/
