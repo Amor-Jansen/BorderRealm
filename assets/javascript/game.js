@@ -131,7 +131,11 @@ window.addEventListener('load', function(){
     }
     //Background will pull all backgrounds together
     class Background {
-
+        constructor(game, image, speedModifier){
+            this.game = game;
+            this.image = image;
+            this.speedModifier = speedModifier;
+        }     
     }
 /*User Interface will be used for things like ammo left and damage*/
     class UserInt {
