@@ -135,6 +135,10 @@ window.addEventListener('load', function(){
             this.game = game;
             this.image = image;
             this.speedModifier = speedModifier;
+            this.width = 1920;
+            this.height = 1080;
+            this.x = 0;
+            this.y = 0;
         }     
     }
 /*User Interface will be used for things like ammo left and damage*/
