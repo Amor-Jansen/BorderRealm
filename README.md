@@ -55,8 +55,8 @@ I hope you will enjoy this game as much as I enjoyed making it.
 - ### Typography
 
 - ### Wireframes
-    - Home page wire frames - [View]()
-    - Game wire frames - [View]()
+    - Home page wire frames - [View](/assets/docs/homescreen.png)
+    - Game wire frames - [View](/assets/docs/game-screen-small.png)
     - Contact us page  - [View]()
 
 ### Existing features:
