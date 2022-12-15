@@ -94,3 +94,8 @@ button {
  #layer1 ,#layer2, #layer3, #layer4, #layer5, #layer6, #layer7, #layer8, #layer9 {
     display: none;
  }
+
+ /*Player sprite image display*/
+ #player {
+    display: none;
+ }
