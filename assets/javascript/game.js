@@ -149,6 +149,14 @@ window.addEventListener('load', function(){
         constructor(game){
             this.game = game;
             this.image1 = document.getElementById('layer1');
+            this.image2 = document.getElementById('layer2');
+            this.image3 = document.getElementById('layer3');
+            this.image4 = document.getElementById('layer4');
+            this.image5 = document.getElementById('layer5');
+            this.image6 = document.getElementById('layer6');
+            this.image7 = document.getElementById('layer7');
+            this.image8 = document.getElementById('layer8');
+            this.image9 = document.getElementById('layer9');
             this.layer1 = new Layers(this.game, this.image1, 1);
             this.layers = [this.layer1];
         }
@@ -156,7 +164,7 @@ window.addEventListener('load', function(){
             this.layers.forEach(layer => layer.update());
         }
         draw(context){
-            this.layer.forEach(layer => layer.draw(context));
+            this.layers.forEach(layer => layer.draw(context));
         }
     }
 /*User Interface will be used for things like ammo left and damage*/
