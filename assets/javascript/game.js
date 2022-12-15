@@ -1,6 +1,6 @@
 /*Code is a mixture of https://www.franksworld.com/tag/franks-laboratory/ , W3Schools , 
-*and https://www.udemy.com/courses/search/?src=ukw&q=javascript+game.
-*Adding an event listener to load all assets before game starts*/
+*and https://www.udemy.com/courses/search/?src=ukw&q=javascript+game.*/
+/*Adding an event listener to load all assets before game starts*/
 window.addEventListener('load', function(){
 /*Setting the canvas layout*/
     const canvas = document.getElementById('game-canvas');
@@ -94,8 +94,8 @@ window.addEventListener('load', function(){
 
     }
     
-/*Enemy is all animation related to the enemies*/
-    class Enemy {
+/*Foe is all animation related to the enemies*/
+    class Foe {
         constructor(game){
             this.game = game;
             this.x = this.game.width;
@@ -116,8 +116,8 @@ window.addEventListener('load', function(){
             context.fillText(this.lives, this.x, this.y)
         }
     }
-/*Monster number one which is a child of the enemy class*/
-    class Angler1 extends Enemy {
+/*Monster number one which is a child of the Foe class*/
+    class Angler1 extends Foe {
         constructor(game){
             super(game);
             this.width = 228 * 0.2;
@@ -144,13 +144,16 @@ window.addEventListener('load', function(){
             context.drawImage(this.image, this.x, this.y)
         }
     }
-    //Background will pull all backgrounds together
+/*Background will pull all backgrounds together*/
     class Background {
         constructor(game){
             this.game = game;
             this.image1 = document.getElementById('layer1');
             this.layer1 = new Layers(this.game, this.image1, 1);
             this.layers = [layer1];
+        }
+        update(){
+            this.layers.forEach(layer => layer.update());
         }
     }
 /*User Interface will be used for things like ammo left and damage*/
@@ -208,8 +211,8 @@ window.addEventListener('load', function(){
             this.userInt = new UserInt(this);
             this.keys = [];
             this.enemies = [];
-            this.enemyTimer = 0;
-            this.enemyInterval = 1000;
+            this.FoeTimer = 0;
+            this.FoeInterval = 1000;
             this.ammo = 20;
             this.maxAmmo = 50;
             this.ammoTimer = 0;
@@ -231,39 +234,39 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
-            this.enemies.forEach(enemy => {
-                enemy.update();
-                if(this.checkCollisions(this.player, enemy)){
-                    enemy.markedForDeletion = true
+            this.enemies.forEach(Foe => {
+                Foe.update();
+                if(this.checkCollisions(this.player, Foe)){
+                    Foe.markedForDeletion = true
                 }
                 this.player.fireBalls.forEach(fireBall => {
-                    if (this.checkCollisions(fireBall, enemy)){
-                        enemy.lives--;
+                    if (this.checkCollisions(fireBall, Foe)){
+                        Foe.lives--;
                         fireBall.markedForDeletion = true;
-                        if (enemy.lives <= 0){
-                            enemy.markedForDeletion = true;
-                           if (!this.gameOver) this.score += enemy.score;
+                        if (Foe.lives <= 0){
+                            Foe.markedForDeletion = true;
+                           if (!this.gameOver) this.score += Foe.score;
                             if (this.score > this.winningScore) this.gameOver = true;
                         }
                     }
                 })
             });
-            this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
-            if (this.enemyTimer > this.enemyInterval && !this.gameOver){
-                this.addEnemy();
-                this.enemyTimer = 0;
+            this.enemies = this.enemies.filter(Foe => !Foe.markedForDeletion);
+            if (this.FoeTimer > this.FoeInterval && !this.gameOver){
+                this.addFoe();
+                this.FoeTimer = 0;
             } else {
-                this.enemyTimer += deltaTime;
+                this.FoeTimer += deltaTime;
             }
         }
         draw(context){
             this.player.draw(context);
             this.userInt.draw(context);
-            this.enemies.forEach(enemy => {
-                enemy.draw(context);
+            this.enemies.forEach(Foe => {
+                Foe.draw(context);
             });
         }
-        addEnemy(){
+        addFoe(){
             this.enemies.push(new Angler1(this));
         }
         checkCollisions(rect1, rect2){
