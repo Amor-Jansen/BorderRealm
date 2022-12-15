@@ -138,10 +138,11 @@ window.addEventListener('load', function(){
         }     
         update(){
             if(this.x <= -this.width) this.x = 0;
-            else this.x -= this.game.speed * this.speedModifier;
+            this.x -= this.game.speed * this.speedModifier;
         }
         draw(context){
-            context.drawImage(this.image, this.x, this.y)
+            context.drawImage(this.image, this.x, this.y);
+            context.drawImage(this.image, this.x + this.width, this.y);
         }
     }
 /*Background will pull all backgrounds together*/
@@ -157,15 +158,15 @@ window.addEventListener('load', function(){
             this.image7 = document.getElementById('layer7');
             this.image8 = document.getElementById('layer8');
             this.image9 = document.getElementById('layer9');
-            this.layer1 = new Layers(this.game, this.image1, 1);
-            this.layer2 = new Layers(this.game, this.image2, 1.5);
-            this.layer3 = new Layers(this.game, this.image3, 2);
-            this.layer4 = new Layers(this.game, this.image4, 2.5);
-            this.layer5 = new Layers(this.game, this.image5, 3);
-            this.layer6 = new Layers(this.game, this.image6, 3.5);
-            this.layer7 = new Layers(this.game, this.image7, 4);
-            this.layer8 = new Layers(this.game, this.image8, 4.5);
-            this.layer9 = new Layers(this.game, this.image9, 5);
+            this.layer1 = new Layers(this.game, this.image1, 0.1);
+            this.layer2 = new Layers(this.game, this.image2, 0.2);
+            this.layer3 = new Layers(this.game, this.image3, 0.3);
+            this.layer4 = new Layers(this.game, this.image4, 0.4);
+            this.layer5 = new Layers(this.game, this.image5, 0.5);
+            this.layer6 = new Layers(this.game, this.image6, 0.6);
+            this.layer7 = new Layers(this.game, this.image7, 0.7);
+            this.layer8 = new Layers(this.game, this.image8, 0.8);
+            this.layer9 = new Layers(this.game, this.image9, 1);
             this.layers = [this.layer1, this.layer2, this.layer3, this.layer4, this.layer5, this.layer6, this.layer7, this.layer8, this.layer9];
         }
         update(){
