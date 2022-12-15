@@ -150,10 +150,13 @@ window.addEventListener('load', function(){
             this.game = game;
             this.image1 = document.getElementById('layer1');
             this.layer1 = new Layers(this.game, this.image1, 1);
-            this.layers = [layer1];
+            this.layers = [this.layer1];
         }
         update(){
             this.layers.forEach(layer => layer.update());
+        }
+        draw(context){
+            this.layer.forEach(layer => layer.draw(context));
         }
     }
 /*User Interface will be used for things like ammo left and damage*/
@@ -206,6 +209,7 @@ window.addEventListener('load', function(){
         constructor(width, height){
             this.width = width;
             this.height = height;
+            this.background = new Background(this);
             this.player = new Player(this);
             this.input = new HandleInput(this);
             this.userInt = new UserInt(this);
@@ -227,6 +231,7 @@ window.addEventListener('load', function(){
         update(deltaTime){
             if (!this.gameOver) this.gameTime += deltaTime;
             if (this.gameTime > this.gameLimit) this.gameOver = true;
+            this.background.update();
             this.player.update();
             if (this.ammoTimer > this.ammoInterval){
                 if (this.ammo < this.maxAmmo) this.ammo++;
@@ -260,6 +265,7 @@ window.addEventListener('load', function(){
             }
         }
         draw(context){
+            this.background.draw(context);
             this.player.draw(context);
             this.userInt.draw(context);
             this.foes.forEach(Foe => {
