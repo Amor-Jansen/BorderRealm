@@ -89,12 +89,12 @@ window.addEventListener('load', function(){
         }
     }
     
-    //Particle is all the particle animations from damaged enemies
+    //Particle is all the particle animations from damaged foes
     class Particle {
 
     }
     
-/*Foe is all animation related to the enemies*/
+/*Foe is all animation related to the foes*/
     class Foe {
         constructor(game){
             this.game = game;
@@ -210,7 +210,7 @@ window.addEventListener('load', function(){
             this.input = new HandleInput(this);
             this.userInt = new UserInt(this);
             this.keys = [];
-            this.enemies = [];
+            this.foes = [];
             this.FoeTimer = 0;
             this.FoeInterval = 1000;
             this.ammo = 20;
@@ -234,7 +234,7 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
-            this.enemies.forEach(Foe => {
+            this.foes.forEach(Foe => {
                 Foe.update();
                 if(this.checkCollisions(this.player, Foe)){
                     Foe.markedForDeletion = true
@@ -251,7 +251,7 @@ window.addEventListener('load', function(){
                     }
                 })
             });
-            this.enemies = this.enemies.filter(Foe => !Foe.markedForDeletion);
+            this.foes = this.foes.filter(Foe => !Foe.markedForDeletion);
             if (this.FoeTimer > this.FoeInterval && !this.gameOver){
                 this.addFoe();
                 this.FoeTimer = 0;
@@ -262,12 +262,12 @@ window.addEventListener('load', function(){
         draw(context){
             this.player.draw(context);
             this.userInt.draw(context);
-            this.enemies.forEach(Foe => {
+            this.foes.forEach(Foe => {
                 Foe.draw(context);
             });
         }
         addFoe(){
-            this.enemies.push(new Angler1(this));
+            this.foes.push(new Angler1(this));
         }
         checkCollisions(rect1, rect2){
             return( rect1.x < rect2.x + rect2.width &&
