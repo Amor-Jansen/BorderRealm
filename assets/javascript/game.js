@@ -5,8 +5,8 @@ window.addEventListener('load', function(){
 /*Setting the canvas layout*/
     const canvas = document.getElementById('game-canvas');
     const context = canvas.getContext('2d');
-    canvas.width = 1500;
-    canvas.height = 500;
+    canvas.width = 1920;
+    canvas.height = 1080;
 
 /*This class handles all the user input, such as key strokes*/ 
     class HandleInput {
@@ -137,7 +137,7 @@ window.addEventListener('load', function(){
             this.y = 0;
         }     
         update(){
-            if(this.x <= this.width) this.x = 0;
+            if(this.x <= -this.width) this.x = 0;
             else this.x -= this.game.speed * this.speedModifier;
         }
         draw(context){
@@ -158,7 +158,15 @@ window.addEventListener('load', function(){
             this.image8 = document.getElementById('layer8');
             this.image9 = document.getElementById('layer9');
             this.layer1 = new Layers(this.game, this.image1, 1);
-            this.layers = [this.layer1];
+            this.layer2 = new Layers(this.game, this.image2, 1.5);
+            this.layer3 = new Layers(this.game, this.image3, 2);
+            this.layer4 = new Layers(this.game, this.image4, 2.5);
+            this.layer5 = new Layers(this.game, this.image5, 3);
+            this.layer6 = new Layers(this.game, this.image6, 3.5);
+            this.layer7 = new Layers(this.game, this.image7, 4);
+            this.layer8 = new Layers(this.game, this.image8, 4.5);
+            this.layer9 = new Layers(this.game, this.image9, 5);
+            this.layers = [this.layer1, this.layer2, this.layer3, this.layer4, this.layer5, this.layer6, this.layer7, this.layer8, this.layer9];
         }
         update(){
             this.layers.forEach(layer => layer.update());
