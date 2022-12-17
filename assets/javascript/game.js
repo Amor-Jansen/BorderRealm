@@ -115,15 +115,17 @@ window.addEventListener('load', function(){
             this.markedForDeletion = false;
             this.lives = 5;
             this.score = this.lives;
+            this.frameX = 0;
+            this.frameY = 0;
+            this. maxFrame = 11;
         }
         update(){
             this.x += this.speedX;
             if (this.x + this.width < 0) this.markedForDeletion = true;
         }
         draw(context){
-            context.fillStyle = 'red';
-            context.fillRect(this.x, this.y, this.width, this.height);
-            context.fillStyle = 'black';
+            if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
+            context.drawImage(this.image, this.x, this.y, this.width, this.height)
             context.font = '20px arpanch';
             context.fillText(this.lives, this.x, this.y)
         }
@@ -132,9 +134,10 @@ window.addEventListener('load', function(){
     class BlueBat extends Foe {
         constructor(game){
             super(game);
-            this.width = 228 * 0.2;
-            this.height = 169 * 0.2;
+            this.width = 475;
+            this.height = 470;
             this.y = Math.random() * (this.game.height * 0.9 - this.height);
+            this.image = document.getElementById('blue-bat');
         }
     }
     //Layers is all functionality of the parallax background
