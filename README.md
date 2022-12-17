@@ -139,15 +139,15 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 |Bug  |Reason  |
 |-----------|-----|
-|Warning in Css validation| This is code from https://dcode.domenade.com|
+|||
 
 - ### Fixed bugs
 
 | Bug                                | How I fixed it            | Outcome |
 |-----                               |----------------           |---------|
 |Background image was not full screen| I used min-height: 100vh; | As desired|
-|Images were not displaying correctly| I used a grid method (see credits)| As desired|
-|Validator warning in HTML           | I icluded a heading in the contact us page| As desired|
+||| As desired|
+||| As desired|
 
 ## Deployment
 
@@ -159,7 +159,7 @@ The method I used to deploy this site is as follows:
     - Select main branch 
     - Select save
 
-The live website can be found at :  
+The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
 
 ## Credits
 
