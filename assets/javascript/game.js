@@ -94,7 +94,7 @@ window.addEventListener('load', function(){
         }
         shootTop(){
             if (this.game.ammo > 0){
-                this.fireBalls.push(new FireBall(this.game, this.x + 80, this.y + 30));
+                this.fireBalls.push(new FireBall(this.game, this.x + 80, this.y + 75));
                 this.game.ammo--;
             }
             
