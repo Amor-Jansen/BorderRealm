@@ -84,7 +84,7 @@ window.addEventListener('load', function(){
             }
         }
         draw(context){
-            context.strokeRect(this.x, this.y, this.width, this.height);
+            if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
             context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
             this.fireBalls.forEach(fireBall => {
                 fireBall.draw(context);
@@ -254,6 +254,7 @@ window.addEventListener('load', function(){
             this.gameTime = 0;
             this.timeLimit = 5000;
             this.speed = 1;
+            this.debug = true;
         }
         update(deltaTime){
             if (!this.gameOver) this.gameTime += deltaTime;
