@@ -56,13 +56,13 @@ window.addEventListener('load', function(){
     class Player {
         constructor(game){
             this.game = game;
-            this.width = 120;
+            this.width = 112;
             this.height = 190;
-            this.x = 20;
-            this.y = 100;
+            this.x = 80;
+            this.y = 800;
             this.frameX = 0;
-            this.frameY = 0;
-            this.maxFrame = 37;
+            this.frameY = 1;
+            this.maxFrame = 42;
             this.speedY = 0;
             this.maxSpeed = 2;
             this.fireBalls = [];
@@ -129,7 +129,7 @@ window.addEventListener('load', function(){
         }
     }
 /*Monster number one which is a child of the Foe class*/
-    class Angler1 extends Foe {
+    class BlueBat extends Foe {
         constructor(game){
             super(game);
             this.width = 228 * 0.2;
@@ -303,7 +303,7 @@ window.addEventListener('load', function(){
             });
         }
         addFoe(){
-            this.foes.push(new Angler1(this));
+            this.foes.push(new BlueBat(this));
         }
         checkCollisions(rect1, rect2){
             return( rect1.x < rect2.x + rect2.width &&
