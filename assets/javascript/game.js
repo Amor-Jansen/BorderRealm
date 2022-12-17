@@ -117,10 +117,10 @@ window.addEventListener('load', function(){
             this.score = this.lives;
             this.frameX = 0;
             this.frameY = 0;
-            this. maxFrame = 11;
+            this. maxFrame = 10;
         }
         update(){
-            this.x += this.speedX;
+            this.x += this.speedX - this.game.speed;
             if (this.x + this.width < 0) this.markedForDeletion = true;
             //Foe animation
             if (this.frameX < this.maxFrame){
