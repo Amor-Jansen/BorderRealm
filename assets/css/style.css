@@ -99,3 +99,8 @@ button {
  #player {
     display: none;
  }
+
+ /*Foe Sprite display*/
+ #blue-bat {
+    display: none;
+ }
