@@ -75,7 +75,7 @@ window.addEventListener('load', function(){
             this.y += this.speedY;
             //Boundaries
             if (this.y > this.game.height - this.height) this.y = this.game.height - this.height;
-            else if (this.y < -this.height) this.y = -this.height;
+            else if (this.y < -this.height * 0.5) this.y = -this.height * 0.5;
             //Handle fire balls
             this.fireBalls.forEach(fireBall => {
                fireBall.update();
@@ -106,7 +106,6 @@ window.addEventListener('load', function(){
     
     //Particle is all the particle animations from damaged foes
     class Particle {
-
     }
     
 /*Foe is all animation related to the foes*/
