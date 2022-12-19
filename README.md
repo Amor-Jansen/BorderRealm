@@ -199,7 +199,7 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
     |Sprite image|https://bevouliin.com/| Free to use|
     |Enemy images|https://bevouliin.com/| Free to use|
     |Parallax background|https://craftpix.net/freebies/free-halloween-2d-game-backgrounds/| Free to use|
-    |Background image| Image by Dorothe from Pixabay||
+    |Background image| Image by Enrique Meseguer from Pixabay||
 
 - ### Thanks
 
