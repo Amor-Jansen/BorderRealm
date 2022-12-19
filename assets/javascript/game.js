@@ -27,6 +27,15 @@ window.addEventListener('load', function(){
                     this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
                 }
             });
+            window.addEventListener('touchstart', e =>{
+
+            });
+            window.addEventListener('touchmove', e => {
+
+            });
+            window.addEventListener('touchend', e => {
+                
+            })
         }
     
     }
