@@ -164,9 +164,21 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
 ## Credits
 
  - ### Code
-    - I did Google a lot of concepts and used information from w3schools.com.
-    - I bought a few courses on Udemy for game development. https://www.udemy.com/courses/search/?src=ukw&q=javascript+game
-    - I followed a bunch of instructional videos from https://www.franksworld.com/tag/franks-laboratory/
+    - I followed a lot of tutorials and have done a few extra courses just for this project.
+    |Code | Source|
+    |-----|-------|
+    |Sprite animation| https://www.youtube.com/watch?v=1bj7g6sXit8|
+    |                | https://www.youtube.com/watch?v=CY0HE277IBM|
+    |Parallax background| https://www.youtube.com/watch?v=Mg7ibYWhjPI&t=1401s|
+    |Enemy animation| https://www.youtube.com/watch?v=aEDADLtLEbk|
+    |All Other resources| https://www.youtube.com/watch?v=gCa0z4B-CRo|
+    |                   |https://www.youtube.com/watch?v=eYTnoJluds0|
+    |                   |https://www.youtube.com/watch?v=EvC3ge_puQk|
+    |                   |https://www.youtube.com/watch?v=CY0HE277IBM&list=PLYElE_rzEw_uryBrrzu2E626MY4zoXvx2|
+    |                   |https://www.youtube.com/watch?v=4q2vvZn5aoo|
+    |                   |https://www.udemy.com/course/learn-game-development-with-javascript/|
+    |                   |https://www.udemy.com/course/javascript-game-development-step-by-step/|
+    |                   |https://www.w3schools.com/graphics/game_intro.asp|
  
  - ### Content
 
