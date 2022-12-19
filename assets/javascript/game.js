@@ -208,6 +208,26 @@ window.addEventListener('load', function(){
             this.layers.forEach(layer => layer.draw(context));
         }
     }
+
+    class Explosion {
+        constructor(game, x, y){
+            this.game = game;
+            this.x = x;
+            this.y = y;
+            this.frameX = 0;
+            this.spriteHeight = 200;
+            this.fps = 15;
+            this.timer = 0;
+            this.interval = 1000/this.fps;
+            this.markedForDeletion = false;
+        }
+        update(deltaTime){
+            this.frameX++;
+        }
+        draw(context){
+            context.drawImage(this.image, this.x, this.y);
+        }
+    }
 /*User Interface will be used for things like ammo left and damage*/
     class UserInt {
         constructor(game){
@@ -274,7 +294,7 @@ window.addEventListener('load', function(){
             this.score = 0;
             this.winningScore = 10;
             this.gameTime = 0;
-            this.timeLimit = 5000;
+            this.timeLimit = 15000;
             this.speed = 1;
             this.debug = false;
         }
