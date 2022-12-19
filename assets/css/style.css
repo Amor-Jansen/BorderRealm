@@ -104,3 +104,9 @@ button {
  #blue-bat, #egg, #green-alien {
     display: none;
  }
+
+ /*Prop display*/
+
+ #fire-ball {
+    display: none;
+ }
