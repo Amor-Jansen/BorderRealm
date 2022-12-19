@@ -8,7 +8,7 @@ window.addEventListener('load', function(){
     canvas.width = 1920;
     canvas.height = 1080;
 
-/*This class handles all the user input, such as key strokes*/ 
+/*This class handles all the user input, such as key strokes and mobile accessibility*/ 
     class HandleInput {
         constructor(game){
             this.game = game;
