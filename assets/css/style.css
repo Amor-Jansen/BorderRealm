@@ -107,6 +107,6 @@ button {
 
  /*Prop display*/
 
- #fire-ball {
+ #fire-ball, #smoke, #fire {
     display: none;
  }

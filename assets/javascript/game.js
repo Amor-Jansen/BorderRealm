@@ -212,20 +212,32 @@ window.addEventListener('load', function(){
     class Explosion {
         constructor(game, x, y){
             this.game = game;
-            this.x = x;
-            this.y = y;
             this.frameX = 0;
             this.spriteHeight = 200;
             this.fps = 15;
             this.timer = 0;
             this.interval = 1000/this.fps;
             this.markedForDeletion = false;
+            this.maxFrame = 8;
         }
         update(deltaTime){
             this.frameX++;
         }
         draw(context){
             context.drawImage(this.image, this.x, this.y);
+        }
+    }
+
+    class smokeExp extends Explosion {
+        constructor(game, x, y){
+            this.image = document.getElementById('smoke');
+            this.spriteWidth = 200;
+            this.width = this.spriteWidth;
+            this.height= this.spriteHeight;
+            this.game = game;
+            this.x = x - this.width * 0.5;
+            this.y = y - this.height * 0.5;
+
         }
     }
 /*User Interface will be used for things like ammo left and damage*/
@@ -284,6 +296,7 @@ window.addEventListener('load', function(){
             this.userInt = new UserInt(this);
             this.keys = [];
             this.foes = [];
+            this.explosions = [];
             this.FoeTimer = 0;
             this.FoeInterval = 1000;
             this.ammo = 20;
