@@ -228,7 +228,7 @@ window.addEventListener('load', function(){
         }
     }
 
-    class smokeExp extends Explosion {
+    class SmokeExp extends Explosion {
         constructor(game, x, y){
             this.image = document.getElementById('smoke');
             this.spriteWidth = 200;
@@ -322,10 +322,13 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
+            this.explosions.forEach(explosion => explosion.update());
+            this.explosions = this.explosions.filter(explosion => !explosion.markedForDeletion);
             this.foes.forEach(Foe => {
                 Foe.update();
                 if(this.checkCollisions(this.player, Foe)){
-                    Foe.markedForDeletion = true
+                    Foe.markedForDeletion = true;
+                    this.addExplosion(foe);
                 }
                 this.player.fireBalls.forEach(fireBall => {
                     if (this.checkCollisions(fireBall, Foe)){
@@ -354,12 +357,19 @@ window.addEventListener('load', function(){
             this.foes.forEach(Foe => {
                 Foe.draw(context);
             });
+            this.explosions.forEach(explosion => {
+                explosion.draw(context)
+            });
         }
         addFoe(){
             const randomize = Math.random();
             if (randomize < 0.5) this.foes.push(new BlueBat(this));
             else this.foes.push(new GreenAlien(this));
             
+        }
+        addExplosion(foe){
+            const randomize = Math.random();
+            if (this.randomize < 1) this.explosion.push(new SmokeExp(this, foe.x, foe.y));
         }
         checkCollisions(rect1, rect2){
             return( rect1.x < rect2.x + rect2.width &&
