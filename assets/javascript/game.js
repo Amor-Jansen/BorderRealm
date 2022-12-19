@@ -113,8 +113,6 @@ window.addEventListener('load', function(){
             this.x = this.game.width;
             this.speedX = Math.random() * -1.5 - 0.5;
             this.markedForDeletion = false;
-            this.lives = 5;
-            this.score = this.lives;
             this.frameX = 0;
             this.frameY = 0;
             this. maxFrame = 10;
@@ -142,6 +140,8 @@ window.addEventListener('load', function(){
             this.height = 470;
             this.y = Math.random() * (this.game.height * 0.9 - this.height);
             this.image = document.getElementById('blue-bat');
+            this.lives = 8;
+            this.score = this.lives;
         }
     }
     class GreenAlien extends Foe {
@@ -151,6 +151,8 @@ window.addEventListener('load', function(){
             this.height = 297;
             this.y = 700;
             this.image = document.getElementById('green-alien');
+            this.lives = 5;
+            this.score = this.lives;
         }
     }
     //Layers is all functionality of the parallax background
