@@ -12,6 +12,8 @@ window.addEventListener('load', function(){
     class HandleInput {
         constructor(game){
             this.game = game;
+            this.touchY = '';
+            this.touchThreshold = 30;
             window.addEventListener('keydown', e => {
                 if (((e.key === 'ArrowUp') ||
                      (e.key === 'ArrowDown')) && this.game.keys.indexOf(e.key) === -1){
@@ -34,7 +36,7 @@ window.addEventListener('load', function(){
 
             });
             window.addEventListener('touchend', e => {
-                
+
             })
         }
     
