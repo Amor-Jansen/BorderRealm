@@ -104,10 +104,6 @@ window.addEventListener('load', function(){
         }
     }
     
-    //Particle is all the particle animations from damaged foes
-    class Particle {
-    }
-    
 /*Foe is all animation related to the foes*/
     class Foe {
         constructor(game){
@@ -209,37 +205,6 @@ window.addEventListener('load', function(){
         }
     }
 
-    class Explosion {
-        constructor(game, x, y){
-            this.game = game;
-            this.frameX = 0;
-            this.spriteHeight = 200;
-            this.fps = 15;
-            this.timer = 0;
-            this.interval = 1000/this.fps;
-            this.markedForDeletion = false;
-            this.maxFrame = 8;
-        }
-        update(deltaTime){
-            this.frameX++;
-        }
-        draw(context){
-            context.drawImage(this.image, this.x, this.y);
-        }
-    }
-
-    class SmokeExp extends Explosion {
-        constructor(game, x, y){
-            this.image = document.getElementById('smoke');
-            this.spriteWidth = 200;
-            this.width = this.spriteWidth;
-            this.height= this.spriteHeight;
-            this.game = game;
-            this.x = x - this.width * 0.5;
-            this.y = y - this.height * 0.5;
-
-        }
-    }
 /*User Interface will be used for things like ammo left and damage*/
     class UserInt {
         constructor(game){
@@ -296,7 +261,6 @@ window.addEventListener('load', function(){
             this.userInt = new UserInt(this);
             this.keys = [];
             this.foes = [];
-            this.explosions = [];
             this.FoeTimer = 0;
             this.FoeInterval = 1000;
             this.ammo = 20;
@@ -322,13 +286,10 @@ window.addEventListener('load', function(){
             } else {
                 this.ammoTimer += deltaTime;
             }
-            this.explosions.forEach(explosion => explosion.update());
-            this.explosions = this.explosions.filter(explosion => !explosion.markedForDeletion);
             this.foes.forEach(Foe => {
                 Foe.update();
                 if(this.checkCollisions(this.player, Foe)){
                     Foe.markedForDeletion = true;
-                    this.addExplosion(foe);
                 }
                 this.player.fireBalls.forEach(fireBall => {
                     if (this.checkCollisions(fireBall, Foe)){
@@ -339,6 +300,7 @@ window.addEventListener('load', function(){
                            if (!this.gameOver) this.score += Foe.score;
                             if (this.score > this.winningScore) this.gameOver = true;
                         }
+                        
                     }
                 })
             });
@@ -357,9 +319,6 @@ window.addEventListener('load', function(){
             this.foes.forEach(Foe => {
                 Foe.draw(context);
             });
-            this.explosions.forEach(explosion => {
-                explosion.draw(context)
-            });
         }
         addFoe(){
             const randomize = Math.random();
@@ -367,15 +326,11 @@ window.addEventListener('load', function(){
             else this.foes.push(new GreenAlien(this));
             
         }
-        addExplosion(foe){
-            const randomize = Math.random();
-            if (this.randomize < 1) this.explosion.push(new SmokeExp(this, foe.x, foe.y));
-        }
         checkCollisions(rect1, rect2){
             return( rect1.x < rect2.x + rect2.width &&
                     rect1.x + rect1.width > rect2.x &&
                     rect1.y < rect2.y + rect2.height &&
-                    rect1.height + rect1.y > rect2.y)
+                    rect1.height + rect1.y > rect2.y);
         }
     }
 
