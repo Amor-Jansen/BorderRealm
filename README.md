@@ -183,19 +183,23 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
  
  - ### Content
 
-    - I used Google fonts 
-    - I used Fontawesome for the footer logos.
-    - I used Favicon.oi for my favicon.
-    - I used Balsamiq for the wireframes.
-    - I used https://ui.dev/amiresponsive for the image under my README logo.
+    |Content| Source| Other |
+    |-------|-------|-------|
+    |Fonts  | Google fonts| |
+    |Logos  | Fontawesome|  |
+    |Favicon| Favicon.oi |  |
+    |WireFrames| Balsamiq|  |
+    |Image under logo| https://ui.dev/amiresponsive|
 
  - ### Media
     
-    - I used https://ui.dev/amiresponsive for the image under my README logo.
-    - the main player sprite is from https://bevouliin.com/
-    - The enemy sprites are fron https://bevouliin.com/
-    - the parallax background is from https://craftpix.net/freebies/free-halloween-2d-game-backgrounds/
-    
+    |Content | Source | Other |
+    |--------|--------|-------|
+    |Responsive logo|https://ui.dev/amiresponsive||
+    |Sprite image|https://bevouliin.com/| Free to use|
+    |Enemy images|https://bevouliin.com/| Free to use|
+    |Parallax background|https://craftpix.net/freebies/free-halloween-2d-game-backgrounds/| Free to use|
+    |Background image| Image by Dorothe from Pixabay||
 
 - ### Thanks
 
