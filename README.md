@@ -165,7 +165,7 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
 
  - ### Code
     - I followed a lot of tutorials and have done a few extra courses just for this project.
-    
+
     |Code               | Source                                                                            |
     |-----              |-------                                                                            |
     |Sprite animation   |https://www.youtube.com/watch?v=1bj7g6sXit8                                        |
@@ -192,6 +192,9 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
  - ### Media
     
     - I used https://ui.dev/amiresponsive for the image under my README logo.
+    - the main player sprite is from https://bevouliin.com/
+    - The enemy sprites are fron https://bevouliin.com/
+    - the parallax background is from https://craftpix.net/freebies/free-halloween-2d-game-backgrounds/
     
 
 - ### Thanks
