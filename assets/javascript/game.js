@@ -130,7 +130,7 @@ window.addEventListener('load', function(){
         draw(context){
             if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
             context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
-            context.font = '20px arpanch';
+            context.font = '20px slackey';
             context.fillText(this.lives, this.x, this.y);
         }
     }
@@ -245,7 +245,7 @@ window.addEventListener('load', function(){
         constructor(game){
             this.game = game;
             this.fontSize = 25;
-            this.fontFamily = 'Sarpanch';
+            this.fontFamily = 'Slackey';
             this.color = 'white'
         }
         draw(context){
