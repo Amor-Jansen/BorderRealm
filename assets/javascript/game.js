@@ -73,6 +73,9 @@ window.addEventListener('load', function(){
             else if (this.game.keys.includes('ArrowDown'))this.speedY = this.maxSpeed;
             else this.speedY = 0;
             this.y += this.speedY;
+            //Boundaries
+            if (this.y > this.game.height - this.height) this.y = this.game.height - this.height;
+            else if (this.y < -this.height) this.y = -this.height;
             //Handle fire balls
             this.fireBalls.forEach(fireBall => {
                fireBall.update();
