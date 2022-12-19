@@ -23,7 +23,7 @@ body {
     letter-spacing: 2px;
     font-size: 300%;
     padding: 15px;
-    color: whitesmoke;
+    color: #30d5c8;
 }
 
 /*Control button information*/
@@ -34,7 +34,7 @@ body {
     padding: 10px;
     letter-spacing: 4PX;
     list-style-type: none;
-    color: #cc5500;
+    color: #00cccc;
 }
 
 /*Style game instructions*/
@@ -43,7 +43,7 @@ body {
     text-align: center;
     font-size: 200%;
     letter-spacing: 4px;
-    color: #cc5500;
+    color: #00cccc;
 }
 
 /*Start button styling*/
