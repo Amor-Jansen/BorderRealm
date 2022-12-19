@@ -101,6 +101,6 @@ button {
  }
 
  /*Foe Sprite display*/
- #blue-bat {
+ #blue-bat, #egg, #green-alien {
     display: none;
  }

@@ -144,6 +144,15 @@ window.addEventListener('load', function(){
             this.image = document.getElementById('blue-bat');
         }
     }
+    class GreenAlien extends Foe {
+        constructor(game){
+            super(game);
+            this.width = 291;
+            this.height = 297;
+            this.y = 700;
+            this.image = document.getElementById('green-alien');
+        }
+    }
     //Layers is all functionality of the parallax background
     class Layers {
         constructor(game, image, speedModifier){
@@ -310,7 +319,10 @@ window.addEventListener('load', function(){
             });
         }
         addFoe(){
-            this.foes.push(new BlueBat(this));
+            const randomize = Math.random();
+            if (randomize < 0.5) this.foes.push(new BlueBat(this));
+            else this.foes.push(new GreenAlien(this));
+            
         }
         checkCollisions(rect1, rect2){
             return( rect1.x < rect2.x + rect2.width &&
