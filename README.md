@@ -51,9 +51,14 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 ### Design
 - ### Colour scheme
-
+    |Colour| Hex / name|
+    |Black| black|
+    |Turqouse|#30d5c8|
+    |Turqouse|#00cccc|
+    |White|whitesmoke|
 
 - ### Typography
+    - I used the following fonts: Ruslan Display, Slackey, Abril Fatface, Sarpanch and sans-serif.
 
 - ### Wireframes
     - Home page wire frames - [View](/assets/docs/homescreen.png)
@@ -63,10 +68,14 @@ I hope you will enjoy this game as much as I enjoyed making it.
 ### Existing features:
 
 - ### Home page
+    - The home page has a start game option.
+    - As well as social media links.
 
 - ### Game 
+    - The game has a scrolling background, animated sprites and user information.
 
 - ### Features to add
+    - A contact form. 
 
 
 ## Technologies used
@@ -107,9 +116,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
     - I ran the entire website through wave and the only warnings to come up were links to home page that
           are adjacent.
-        -  [Wave accessibility Home page]()
-        -  [Wave accessibility Game page]()
-        -  [Wave accessibility Contact us page]()
+        -  [Wave accessibility Home page](/assets/docs/wave.png)
     
     - ### Lighthouse
 
