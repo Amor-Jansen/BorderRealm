@@ -44,7 +44,7 @@ window.addEventListener('load', function(){
                 this.game.keys.splice(this.game.keys.indexOf('swipe down'), 1);
             });
             window.addEventListener('click', e => {
-                if ( e.key === 'click') this.game.player.shootTop();
+                console.log('click');
             });
 
         }

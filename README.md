@@ -121,6 +121,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
     - I ran the entire website through wave and the only warnings to come up were links to home page that
           are adjacent.
         -  [Wave accessibility Home page](/assets/docs/wave.png)
+        - [Wave accessibility Game page](/assets/docs/lighthouse2.png)
     
     - ### Lighthouse
 
