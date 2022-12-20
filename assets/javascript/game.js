@@ -14,12 +14,12 @@ window.addEventListener('load', function(){
             this.game = game;
             this.keys = [];
             this.touchY = '';
-            this.touchThreshold = 5;
+            this.touchThreshold = 10;
             window.addEventListener('keydown', e => {
                 if (((e.key === 'ArrowUp') ||
                      (e.key === 'ArrowDown')) && this.game.keys.indexOf(e.key) === -1){
                     this.game.keys.push(e.key);
-                } else if ( e.key === ' ' || 'touch tap'){
+                } else if ( e.key === ' '){
                     this.game.player.shootTop();
                 } else if ( e.key === 'd'){
                     this.game.debug = !this.game.debug;
@@ -37,7 +37,9 @@ window.addEventListener('load', function(){
                 const swipeDistance = e.changedTouches[0].pageY - this.touchY;
                 if (swipeDistance < -this.touchThreshold && this.game.keys.indexOf('swipe up') === -1) this.game.keys.push('swipe up');
                 else if (swipeDistance > this.touchThreshold && this.game.keys.indexOf('swipe down') === -1) this.game.keys.push('swipe down');
-                else if (swipeDistance == this.touchThreshold && this.game.keys.indexOf('touchTap') === -1) this.game.keys.push('touch tap');
+                else if (swipeDistance == this.touchThreshold && this.game.keys.indexOf('touch tap') === -1) this.game.keys.push('touch tap');
+                else if (e.changedTouches === 'touch tap') this.game.player.shootTop();
+
             });
             window.addEventListener('touchend', e => {
                 this.game.keys.splice(this.game.keys.indexOf('swipe up'), 1);
@@ -196,7 +198,7 @@ window.addEventListener('load', function(){
             context.drawImage(this.image, this.x + this.width, this.y);
         }
     }
-/*Background will pull all backgrounds together*/
+/*Background will pull all background layers together*/
     class Background {
         constructor(game){
             this.game = game;
