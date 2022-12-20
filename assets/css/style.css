@@ -127,7 +127,7 @@ a {
 
  /*Media queries*/
 
- @media screen and (min-width: 380px) {
+ @media screen and (min-width: 375px) {
     body {
         height: 100vh;
     }

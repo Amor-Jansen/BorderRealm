@@ -12,6 +12,7 @@ window.addEventListener('load', function(){
     class HandleInput {
         constructor(game){
             this.game = game;
+            this.keys = [];
             this.touchY = '';
             this.touchThreshold = 10;
             window.addEventListener('keydown', e => {
@@ -30,6 +31,7 @@ window.addEventListener('load', function(){
                 }
             });
             window.addEventListener('touchstart', e =>{
+                e.preventDefault();
                 this.touchY = e.changedTouches[0].pageY;
             });
             window.addEventListener('touchmove', e => {
