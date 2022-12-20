@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
-    background-color: darkcyan;
+    background-color: #DAA06D;
 
 }
 
@@ -29,7 +29,7 @@ body {
 
 /*Control button information*/
 #game-cont-exp {
-    font-family: Ruslan Display, sans-serif;
+    font-family: 'Ruslan Display', sans-serif;
     font-size: 150%;
     text-align: center;
     padding: 10px;
@@ -40,7 +40,7 @@ body {
 
 /*Style game instructions*/
 #game-instructions {
-    font-family: Ruslan Display, sans-serif;
+    font-family: 'Ruslan Display', sans-serif;
     text-align: center;
     font-size: 200%;
     letter-spacing: 4px;
@@ -54,18 +54,16 @@ h3 {
 
 #start-button {
     margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
 }
 
-button {
+a {
     font-family: Slackey, sans-serif;
-    font-size: 200%;
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 25px;
-    background-color: darkgreen;
-    color: whitesmoke;
-
+    font-size: 300%;
+    text-decoration: none;
+    color: #00cccc;
 }
 
 /* Footer styling*/
@@ -100,9 +98,9 @@ button {
 
 #back-btn {
     font-family: Slackey, sans-serif;
-    font-size: 20%;
+    font-size: 100%;
     color: #00cccc;
-    position: left;
+    float: left;
     text-decoration: none;
 }
  /*Parallax background images display*/

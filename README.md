@@ -23,6 +23,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 4. [Testing](#testing)
     1. [HTML](#html)
     2. [CSS](#css)
+    3. [JSHint](#jshint)
     3. [Wave](#wave)
     4. [Lighthouse](#lighthouse)
 5. [Unfixed bugs](#unfixed-bugs)
@@ -90,14 +91,18 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
     - ### HTML
 
-    - I used the W3C HTML validator. I used url input.
-       - [Image of validated HTML]()
+    - I used the W3C HTML validator. I used direct input.
+       - [Image of validated HTML](/assets/docs/homescreen.png)
+       - [Image of validated HTML](/assets/docs/game.html.png)
 
     - ### CSS
 
     - I used the W3C CSS validator.
-       - [Image of validated CSS]()
+       - [Image of validated CSS](/assets/docs/css.png)
 
+    - ### JSHint
+    - I used jshint to validate my Javascript. There are warnings they are all for ES6.
+        - [Image of JavaScript validation](/assets/docs/js.png)
     - ### Wave accessibility
 
     - I ran the entire website through wave and the only warnings to come up were links to home page that
@@ -139,7 +144,8 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 |Bug  |Reason  |
 |-----------|-----|
-|||
+|Js Hint shows 38 warnings| Its all ES6 warnings|
+|Mobile touch actions not working| It keeps showing an undefined 'this' yet all are defined|
 
 - ### Fixed bugs
 
