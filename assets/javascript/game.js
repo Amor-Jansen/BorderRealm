@@ -43,9 +43,6 @@ window.addEventListener('load', function(){
                 this.game.keys.splice(this.game.keys.indexOf('swipe up'), 1);
                 this.game.keys.splice(this.game.keys.indexOf('swipe down'), 1);
             });
-            window.addEventListener('click', e => {
-                console.log('click');
-            });
 
         }
     
