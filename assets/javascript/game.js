@@ -34,11 +34,12 @@ window.addEventListener('load', function(){
             });
             window.addEventListener('touchmove', e => {
                 const swipeDistance = e.changedTouches[0].pageY - this.touchY;
-                if (swipeDistance < -this.touchThreshold && this.keys.indexOf('swipe up' === -1)) this.keys.push('swipe up');
-                else if (swipeDistance > this.touchThreshold && this.keys.indexOf('swipe down' === -1)) this.keys.push('swipe down');
+                if (swipeDistance < -this.touchThreshold && this.keys.indexOf('swipe up') === -1) this.keys.push('swipe up');
+                else if (swipeDistance > this.touchThreshold && this.keys.indexOf('swipe down') === -1) this.keys.push('swipe down');
             });
             window.addEventListener('touchend', e => {
-
+                this.keys.splice(this.keys.indexOf('swipe up'), 1);
+                this.keys.splice(this.keys.indexOf('swipe down'), 1);
             })
         }
     
@@ -88,7 +89,7 @@ window.addEventListener('load', function(){
             this.maxFrame = 42;
         }
         update(){
-            if (this.game.keys.includes('ArrowUp'))this.speedY = -this.maxSpeed;
+            if (this.game.keys.includes('ArrowUp') || this.game.keys.includes('swipe up'))this.speedY = -this.maxSpeed;
             else if (this.game.keys.includes('ArrowDown'))this.speedY = this.maxSpeed;
             else this.speedY = 0;
             this.y += this.speedY;
@@ -286,7 +287,7 @@ window.addEventListener('load', function(){
             this.keys = [];
             this.foes = [];
             this.FoeTimer = 0;
-            this.FoeInterval = 1000;
+            this.FoeInterval = 2000;
             this.ammo = 20;
             this.maxAmmo = 50;
             this.ammoTimer = 0;
