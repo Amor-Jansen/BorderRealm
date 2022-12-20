@@ -76,6 +76,9 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 - ### Features to add
     - A contact form. 
+    - Scroller bar for difficulty.
+    - More enemies.
+    - More games.
 
 
 ## Technologies used
