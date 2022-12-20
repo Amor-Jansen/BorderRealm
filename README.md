@@ -121,9 +121,13 @@ I hope you will enjoy this game as much as I enjoyed making it.
     - ### Testing user stories
 
 - ### First time visitor goals:
-    1. As a first time visitor, 
+    1. As a first time visitor, I was unsure of how to play the game.
+    - I included a description of the game controls. 
+    - [Controls](/assets/docs/game-controls.png)
 
-    2. As a first time visitor, 
+    2. As a first time visitor, I could not see my game score.
+    - I added a game score on the page, as well as a timer and ammo counter.
+    - [Score](/assets/docs/player-stats.png)
 
     3. As a first time visitor, 
 
