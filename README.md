@@ -51,11 +51,12 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 ### Design
 - ### Colour scheme
-    |Colour| Hex / name|
-    |Black| black|
-    |Turqouse|#30d5c8|
-    |Turqouse|#00cccc|
-    |White|whitesmoke|
+    |Colour   | Hex / name|
+    |------   |-----------|
+    |Black    |      black|
+    |Turqouise|#30d5c8    |
+    |Turquoise|#00cccc    |
+    |White    |whitesmoke |
 
 - ### Typography
     - I used the following fonts: Ruslan Display, Slackey, Abril Fatface, Sarpanch and sans-serif.
