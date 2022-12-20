@@ -114,9 +114,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
     - ### Lighthouse
 
     - I ran my page through lighthouse in chrome.
-       - [Lighthouse Home page]()
-       - [Lighthouse Game page]()
-       - [Lighthouse Contact page]()
+       - [Lighthouse Home page](/assets/docs/lighthouse.png)
 
     - ### Testing user stories
 
@@ -129,20 +127,20 @@ I hope you will enjoy this game as much as I enjoyed making it.
     - I added a game score on the page, as well as a timer and ammo counter.
     - [Score](/assets/docs/player-stats.png)
 
-    3. As a first time visitor, 
+    3. As a first time visitor, I did not understand the game.
 
 - ### Returning visitor goals:
-    1. As a returning visitor, 
+    1. As a returning visitor, I want to be able to play this on my phone.
 
-    2. As a returning visitor,
+    2. As a returning visitor, I would like to increase the difficulty.
 
-    3. As a returning visitor, 
+    3. As a returning visitor, I would like more enemies.
 
 - ### Frequent user goals
-    1. As a frequent user,
-    2. As a frequent user,
+    1. As a frequent user, I would like more games.
+    2. As a frequent user, I would like to see a leaderboard.
 
-    3. As a frequent user, 
+    3. As a frequent user, I would like to make contact with the game developer.
 
 - ### Unfixed bugs
 
