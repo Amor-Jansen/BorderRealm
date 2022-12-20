@@ -11,9 +11,10 @@ body {
     background-image: url('../images/skull.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    height: 100vh;
     background-size: cover;
     background-color: darkcyan;
-    height: 100vh;
+
 }
 
 /*Heading styling*/
@@ -44,6 +45,9 @@ body {
     font-size: 200%;
     letter-spacing: 4px;
     color: #00cccc;
+}
+h3 {
+    padding: 10px;
 }
 
 /*Start button styling*/
@@ -121,4 +125,54 @@ button {
 
  #fire-ball, #smoke, #fire {
     display: none;
+ }
+
+ /*Media queries*/
+
+ @media screen and (min-width: 380px) {
+    body {
+        height: 100vh;
+    }
+    #header {
+        font-size: 30px;
+    }
+    #game-cont-exp {
+        font-size: 15px;
+    }
+    #game-instructions {
+        font-size: 15px;
+    }
+    #start-button {
+        font-size: 15px;
+    }
+    #social-media {
+        font-size: 25px;
+    }
+    .icons, .social {
+        font-size: 25px;
+    }
+ }
+
+ @media screen and (min-width: 810px) {
+    body {
+        height: 100vh;
+    }
+    #header {
+        font-size: 40px;
+    }
+    #game-cont-exp {
+        font-size: 20px;
+    }
+    #game-instructions {
+        font-size: 20px;
+    }
+    #start-button {
+        font-size: 20px;
+    }
+    #social-media {
+        font-size: 30px;
+    }
+    .icons, .social {
+        font-size: 30px;
+    }
  }

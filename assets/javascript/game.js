@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
         constructor(game){
             this.game = game;
             this.touchY = '';
-            this.touchThreshold = 30;
+            this.touchThreshold = 10;
             window.addEventListener('keydown', e => {
                 if (((e.key === 'ArrowUp') ||
                      (e.key === 'ArrowDown')) && this.game.keys.indexOf(e.key) === -1){
@@ -40,7 +40,7 @@ window.addEventListener('load', function(){
             window.addEventListener('touchend', e => {
                 this.keys.splice(this.keys.indexOf('swipe up'), 1);
                 this.keys.splice(this.keys.indexOf('swipe down'), 1);
-            })
+            });
         }
     
     }
@@ -90,7 +90,7 @@ window.addEventListener('load', function(){
         }
         update(){
             if (this.game.keys.includes('ArrowUp') || this.game.keys.includes('swipe up'))this.speedY = -this.maxSpeed;
-            else if (this.game.keys.includes('ArrowDown'))this.speedY = this.maxSpeed;
+            else if (this.game.keys.includes('ArrowDown') || this.game.keys.includes('swipe down'))this.speedY = this.maxSpeed;
             else this.speedY = 0;
             this.y += this.speedY;
             //Boundaries
