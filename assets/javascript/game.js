@@ -30,10 +30,12 @@ window.addEventListener('load', function(){
                 }
             });
             window.addEventListener('touchstart', e =>{
-
+                this.touchY = e.changedTouches[0].pageY;
             });
             window.addEventListener('touchmove', e => {
-
+                const swipeDistance = e.changedTouches[0].pageY - this.touchY;
+                if (swipeDistance < -this.touchThreshold && this.keys.indexOf('swipe up' === -1)) this.keys.push('swipe up');
+                else if (swipeDistance > this.touchThreshold && this.keys.indexOf('swipe down' === -1)) this.keys.push('swipe down');
             });
             window.addEventListener('touchend', e => {
 
@@ -78,6 +80,12 @@ window.addEventListener('load', function(){
             this.maxSpeed = 2;
             this.fireBalls = [];
             this.image = document.getElementById('player');
+        }
+        restart(){
+            this.x = 80;
+            this.y = 800;
+            this.frameY = 1;
+            this.maxFrame = 42;
         }
         update(){
             if (this.game.keys.includes('ArrowUp'))this.speedY = -this.maxSpeed;
@@ -214,6 +222,9 @@ window.addEventListener('load', function(){
         draw(context){
             this.layers.forEach(layer => layer.draw(context));
         }
+        restart(){
+            this.x = 0;
+        }
     }
 
 /*User Interface will be used for things like ammo left and damage*/
@@ -261,6 +272,8 @@ window.addEventListener('load', function(){
             context.restore();
         }
     }
+
+
 /*Game is the class everything will run through and come together*/
     class Game {
         constructor(width, height){
