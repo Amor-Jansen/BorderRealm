@@ -135,19 +135,29 @@ I hope you will enjoy this game as much as I enjoyed making it.
     - [Score](/assets/docs/player-stats.png)
 
     3. As a first time visitor, I did not understand the game.
+    - There is a game description on the home page.
+    - [Description](/assets/docs/instructions.png)
 
 - ### Returning visitor goals:
     1. As a returning visitor, I want to be able to play this on my phone.
+    - I have attempted to add touch events.
+    - I have the character moving up and down. I am unable to make him fire.
 
     2. As a returning visitor, I would like to increase the difficulty.
+    - I want to add a scroller at the bottom that will increase the speed of the game.
 
     3. As a returning visitor, I would like more enemies.
+    - I intend to include more enemies.
 
 - ### Frequent user goals
     1. As a frequent user, I would like more games.
+    - I would like to add more JS games to this page at a later date.
+
     2. As a frequent user, I would like to see a leaderboard.
+    - If the user clicks on the links they can share their score on social media.
 
     3. As a frequent user, I would like to make contact with the game developer.
+    - As my wireframes show I intend to include a contact form.
 
 - ### Unfixed bugs
 

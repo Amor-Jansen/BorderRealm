@@ -37,15 +37,16 @@ window.addEventListener('load', function(){
                 const swipeDistance = e.changedTouches[0].pageY - this.touchY;
                 if (swipeDistance < -this.touchThreshold && this.game.keys.indexOf('swipe up') === -1) this.game.keys.push('swipe up');
                 else if (swipeDistance > this.touchThreshold && this.game.keys.indexOf('swipe down') === -1) this.game.keys.push('swipe down');
-                else if (swipeDistance == this.touchThreshold && this.game.keys.indexOf('touch tap') === -1) this.game.keys.push('touch tap');
-                else if (e.changedTouches === 'touch tap') this.game.player.shootTop();
 
             });
             window.addEventListener('touchend', e => {
                 this.game.keys.splice(this.game.keys.indexOf('swipe up'), 1);
                 this.game.keys.splice(this.game.keys.indexOf('swipe down'), 1);
-                this.game.keys.splice(this.game.keys.indexOf('touch tap'), 1);
             });
+            window.addEventListener('click', e => {
+                if ( e.key === 'click') this.game.player.shootTop();
+            });
+
         }
     
     }
