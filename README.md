@@ -1,6 +1,6 @@
 # Border Realm
 
-![Image of mockup]()
+![Image of mockup](/assets/docs/responsive.png)
 
 For this website I really wanted to challenge myself and learn how to code a 2D game using Vanilla JavaScript, no libraries and no frameworks. I bought a few extra courses through Udemy https://www.udemy.com/courses/search/?src=ukw&q=javascript+game and watched a tonne of game development videos from https://www.franksworld.com/tag/franks-laboratory/. I followed many instructions from W3Schools as well, an also the Love-Maths project. I initially wanted it to be a steampunk game, however it has now evolved into something completely different.
 
@@ -162,7 +162,6 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |-----                               |----------------           |---------|
 |Background image was not full screen| I used min-height: 100vh; | As desired|
 |Touch motions did not work|contacted student support, I was pushing into the wrong array| As desired|
-||| As desired|
 
 ## Deployment
 
