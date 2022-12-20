@@ -88,7 +88,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
 - ### Frameworks, Libraries and Programs used
 
-    - [Google Fonts](https://fonts.google.com/) - Used to import the Shalimar and Overpass fonts.
+    - [Google Fonts](https://fonts.google.com/) - Used to import the fonts.
     - [Font awesome](https://fontawesome.com/) - Used for the footer icons and copyright icon.
     - [Git](https://git-scm.com/) - Used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
     - [Github](https://github.com/) - Used to store code after being pushed from Git.
@@ -154,14 +154,14 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |Bug  |Reason  |
 |-----------|-----|
 |Js Hint shows 38 warnings| Its all ES6 warnings|
-|Mobile touch actions not working| It keeps showing an undefined 'this' yet all are defined|
+|Touch action for shooting not working| I have tried a few things to get it tap sensitive|
 
 - ### Fixed bugs
 
 | Bug                                | How I fixed it            | Outcome |
 |-----                               |----------------           |---------|
 |Background image was not full screen| I used min-height: 100vh; | As desired|
-||| As desired|
+|Touch motions did not work|contacted student support, I was pushing into the wrong array| As desired|
 ||| As desired|
 
 ## Deployment
