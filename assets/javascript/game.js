@@ -286,10 +286,10 @@ window.addEventListener('load', function(){
         constructor(width, height){
             this.width = width;
             this.height = height;
+            this.userInt = new UserInt(this);
             this.background = new Background(this);
             this.player = new Player(this);
             this.input = new HandleInput(this);
-            this.userInt = new UserInt(this);
             this.keys = [];
             this.foes = [];
             this.FoeTimer = 0;
