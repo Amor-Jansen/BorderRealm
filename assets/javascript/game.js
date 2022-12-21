@@ -47,7 +47,7 @@ window.addEventListener('load', function(){
             window.addEventListener('click', function(){
                 if (game-canvas === 'click') this.game.player.shootTop();
                 console.log('click');
-            })
+            });
 
         }
     
@@ -155,7 +155,6 @@ window.addEventListener('load', function(){
             if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
             context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
             context.font = '20px slackey';
-            //context.fillText(this.lives, this.x, this.y);
         }
     }
 /*Monster number one which is a child of the Foe class*/
