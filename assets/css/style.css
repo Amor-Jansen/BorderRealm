@@ -60,6 +60,11 @@ h3 {
     color: whitesmoke;
 }
 
+.start {
+    border: 3px solid black;
+    background: green;
+    border-radius: 15px;
+}
 a {
     font-family: Slackey, sans-serif;
     font-size: 300%;
@@ -126,15 +131,17 @@ a {
     display: none;
  }
 
+ /*Restart button styling*/
  #restart {
     font-family: 'Slackey', sans-serif;
     font-size: 90%;
-    float: right;
     color: #30d5c8;
     background-color: bisque;
     padding: 2px 2px;
+    float: right;
  }
 
+ /*Shoot button styling*/
  #shoot {
     font-family: 'Slackey', sans-serif;
     font-size: 90%;

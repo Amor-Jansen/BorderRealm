@@ -179,7 +179,7 @@ window.addEventListener('load', function(){
             this.score = this.lives;
         }
     }
-    //Layers is all functionality of the parallax background
+//Layers is all functionality of the parallax background
     class Layers {
         constructor(game, image, speedModifier){
             this.game = game;
