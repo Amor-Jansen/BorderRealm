@@ -126,6 +126,15 @@ a {
     display: none;
  }
 
+ #restart {
+    font-family: 'Slackey', sans-serif;
+    font-size: 90%;
+    float: right;
+    color: #30d5c8;
+    background-color: bisque;
+    padding: 2px 2px;
+ }
+
  /*Media queries*/
 
  @media screen and (min-width: 320px) {

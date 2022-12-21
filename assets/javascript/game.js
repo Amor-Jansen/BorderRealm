@@ -262,11 +262,11 @@ window.addEventListener('load', function(){
                 let message1;
                 let message2;
                 if (this.game.score > this.game.winningScore){
-                    message1 = 'You Win!';
+                    message1 = 'You Win! Click restart to go again.';
                     message2 = 'Congradulations!';
                 } else {
                     message1 = 'You Lose!';
-                    message2 = 'Try Again..';
+                    message2 = 'Click Restart To Try Again..';
                 }
                 context.font = '50px ' + this.fontFamily;
                 context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 40);
