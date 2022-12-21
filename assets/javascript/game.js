@@ -375,3 +375,9 @@ window.addEventListener('load', function(){
     }
     animate(0);
 });
+
+/*Reload/Restart function*/
+document.querySelector('#restart').addEventListener('click', function(){
+    window.location.reload();
+    return false;
+});
