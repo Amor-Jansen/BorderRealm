@@ -171,6 +171,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |-----------|-----|
 |Js Hint shows 38 warnings| Its all ES6 warnings|
 |Touch action for shooting not working| I have tried a few things to get it tap sensitive|
+|                                     | Including adding a click option on the game canvas|
 
 - ### Fixed bugs
 
