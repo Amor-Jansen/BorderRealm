@@ -135,6 +135,16 @@ a {
     padding: 2px 2px;
  }
 
+ #shoot {
+    font-family: 'Slackey', sans-serif;
+    font-size: 90%;
+    color: #30d5c8;
+    background-color: darkblue;
+    padding: 2px 2px;
+    display: block;
+    margin: 0 auto;
+ }
+
  /*Media queries*/
 
  @media screen and (min-width: 320px) {

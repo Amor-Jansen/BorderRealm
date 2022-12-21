@@ -44,10 +44,8 @@ window.addEventListener('load', function(){
                 this.game.keys.splice(this.game.keys.indexOf('swipe down'), 1);
             });
 
-            window.addEventListener('click', e =>{
-                if (game-canvas === 'click'){
-                    this.game.player.shootTop()};
-                console.log('click');
+            document.getElementById('shoot').addEventListener('click', e =>{
+                    this.game.player.shootTop();
             });
 
         }
