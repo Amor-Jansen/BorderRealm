@@ -155,7 +155,7 @@ window.addEventListener('load', function(){
             if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
             context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
             context.font = '20px slackey';
-            context.fillText(this.lives, this.x, this.y);
+            //context.fillText(this.lives, this.x, this.y);
         }
     }
 /*Monster number one which is a child of the Foe class*/
@@ -166,7 +166,7 @@ window.addEventListener('load', function(){
             this.height = 470;
             this.y = Math.random() * (this.game.height * 0.9 - this.height);
             this.image = document.getElementById('blue-bat');
-            this.lives = 8;
+            this.lives = 5;
             this.score = this.lives;
         }
     }
@@ -177,7 +177,7 @@ window.addEventListener('load', function(){
             this.height = 297;
             this.y = 700;
             this.image = document.getElementById('green-alien');
-            this.lives = 5;
+            this.lives = 3;
             this.score = this.lives;
         }
     }
@@ -222,7 +222,7 @@ window.addEventListener('load', function(){
             this.layer6 = new Layers(this.game, this.image6, 0.6);
             this.layer7 = new Layers(this.game, this.image7, 0.7);
             this.layer8 = new Layers(this.game, this.image8, 0.8);
-            this.layer9 = new Layers(this.game, this.image9, 1);
+            this.layer9 = new Layers(this.game, this.image9, 2);
             this.layers = [this.layer1, this.layer2, this.layer3, this.layer4, this.layer5, this.layer6, this.layer7, this.layer8, this.layer9];
         }
         update(){
@@ -295,17 +295,17 @@ window.addEventListener('load', function(){
             this.keys = [];
             this.foes = [];
             this.FoeTimer = 0;
-            this.FoeInterval = 2000;
+            this.FoeInterval = 1000;
             this.ammo = 20;
-            this.maxAmmo = 50;
+            this.maxAmmo = 30;
             this.ammoTimer = 0;
             this.ammoInterval = 500;
             this.gameOver = false;
             this.score = 0;
-            this.winningScore = 10;
+            this.winningScore = 50;
             this.gameTime = 0;
             this.timeLimit = 15000;
-            this.speed = 1;
+            this.speed = 1.5;
             this.debug = false;
         }
         update(deltaTime){
@@ -323,6 +323,7 @@ window.addEventListener('load', function(){
                 Foe.update();
                 if(this.checkCollisions(this.player, Foe)){
                     Foe.markedForDeletion = true;
+                    this.gameOver = true;
                 }
                 this.player.fireBalls.forEach(fireBall => {
                     if (this.checkCollisions(fireBall, Foe)){
