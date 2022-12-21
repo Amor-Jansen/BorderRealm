@@ -160,6 +160,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 
     2. As a frequent user, I would like to see a leaderboard.
     - If the user clicks on the links they can share their score on social media.
+    - [Socials](/assets/docs/socials.png)
 
     3. As a frequent user, I would like to make contact with the game developer.
     - As my wireframes show I intend to include a contact form.
