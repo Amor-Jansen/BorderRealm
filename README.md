@@ -170,8 +170,6 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |Bug  |Reason  |
 |-----------|-----|
 |Js Hint shows 38 warnings| Its all ES6 warnings|
-|Touch action for shooting not working| I have tried a few things to get it tap sensitive|
-|                                     | Including adding a click option on the game canvas|
 
 - ### Fixed bugs
 
@@ -179,6 +177,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |-----                               |----------------           |---------|
 |Background image was not full screen| I used min-height: 100vh; | As desired|
 |Touch motions did not work|contacted student support, I was pushing into the wrong array| As desired|
+|Shooting for mobile users| I added a button for shooting| As desired|
 
 ## Deployment
 
