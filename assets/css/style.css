@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('../images/skull.jpg');
+    background-image: url('../images/background-halloween.jpg');
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -25,7 +25,7 @@ body {
     font-size: 300%;
     padding: 15px;
     margin-top: 20px;
-    color: #30d5c8;
+    color: #33b3a6;
 }
 
 /*Control button information*/
@@ -36,7 +36,7 @@ body {
     padding: 10px;
     letter-spacing: 4PX;
     list-style-type: none;
-    color: #00cccc;
+    color: #33b3a6;
 }
 
 /*Style game instructions*/
@@ -45,7 +45,7 @@ body {
     text-align: center;
     font-size: 200%;
     letter-spacing: 4px;
-    color: #00cccc;
+    color: #33b3a6;
 }
 h3 {
     padding: 10px;

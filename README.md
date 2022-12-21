@@ -54,8 +54,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
     |Colour   | Hex / name|
     |------   |-----------|
     |Black    |      black|
-    |Turqouise|#30d5c8    |
-    |Turquoise|#00cccc    |
+    |Turquoise|    #33b3a6|
     |White    |whitesmoke |
 
 - ### Typography
@@ -170,6 +169,8 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |Bug  |Reason  |
 |-----------|-----|
 |Js Hint shows 38 warnings| Its all ES6 warnings|
+|Shoot button goes behind canvas when mobile is on side| I have tried stacking with CSS display block|
+|Mobile swipe moves whole screen| I tried to disable the swipe default, it gave errors in the console|
 
 - ### Fixed bugs
 
@@ -229,7 +230,7 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
     |Sprite image|https://bevouliin.com/| Free to use|
     |Enemy images|https://bevouliin.com/| Free to use|
     |Parallax background|https://craftpix.net/freebies/free-halloween-2d-game-backgrounds/| Free to use|
-    |Background image| Image by Enrique Meseguer from Pixabay||
+    |Background image| Image by Yuri from Pixabay||
 
 - ### Thanks
 

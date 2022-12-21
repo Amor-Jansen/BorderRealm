@@ -266,7 +266,7 @@ window.addEventListener('load', function(){
                 let message2;
                 if (this.game.score > this.game.winningScore){
                     message1 = 'You Win! Click restart to go again.';
-                    message2 = 'Congradulations!';
+                    message2 = 'Congratulations!';
                 } else {
                     message1 = 'You Lose!';
                     message2 = 'Click Restart To Try Again..';
