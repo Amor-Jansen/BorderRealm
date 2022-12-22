@@ -212,6 +212,7 @@ The live website can be found at :  https://amor-jansen.github.io/BorderRealm/
     |                   |https://www.udemy.com/course/learn-game-development-with-javascript/               |
     |                   |https://www.udemy.com/course/javascript-game-development-step-by-step/             |
     |                   |https://www.w3schools.com/graphics/game_intro.asp                                  |
+    |Restart button     |https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button      |
  
  - ### Content
 
