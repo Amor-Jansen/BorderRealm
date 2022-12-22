@@ -171,6 +171,7 @@ I hope you will enjoy this game as much as I enjoyed making it.
 |Js Hint shows 38 warnings| Its all ES6 warnings|
 |Shoot button goes behind canvas when mobile is on side| I have tried stacking with CSS display block|
 |Mobile swipe moves whole screen| I tried to disable the swipe default, it gave errors in the console|
+|Mobile default down swipe refresh| Again I attempted to disable but it gave console errors|
 
 - ### Fixed bugs
 
